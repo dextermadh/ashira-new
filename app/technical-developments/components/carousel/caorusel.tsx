@@ -2,8 +2,8 @@
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import LightGallery from 'lightgallery/react';
 import lgZoom from 'lightgallery/plugins/zoom';
-import './style.scss';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import './style.scss';
 import { LightGallery as ILightGallery } from 'lightgallery/lightgallery';
 
 const images = [
@@ -26,55 +26,53 @@ const images = [
 
 export const Carousel3: FC<{ name: string }> = ({ name }) => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [galleryContainer, setGalleryContainer] = useState<HTMLElement | null>(null);
+    const [galleryContainer, setGalleryContainer] = useState<ILightGallery | null>(null);
 
     const onInit = useCallback((detail: { instance: ILightGallery }) => {
-        if (detail && detail.instance) {
+        if (detail) {
             detail.instance.openGallery();
         }
     }, []);
 
-    useEffect(() => {
-        if (containerRef.current) {
-            setGalleryContainer(containerRef.current);
-        }
-    }, []);
-
+    // Generate dynamicEl data from images array
     const dynamicEl = images.map((src, index) => ({
         src,
-        thumb: src, // Assuming thumb is the same as src
+        thumb: src,
         subHtml: `<div class="lightGallery-captions">
                     <h4>Portfolio Page ${index + 1}</h4>
                   </div>`,
     }));
 
+    useEffect(() => {
+        if (containerRef.current) {
+          setGalleryContainer('aaa' as unknown as ILightGallery);
+        }
+      }, []);
+      console.log(containerRef.current);
+
     return (
         <div className="App">
             <div
-                style={{
-                    height: '800px',
-                }}
+                style={{ height: '800px' }}
                 ref={containerRef}
             ></div>
             <div>
-                {galleryContainer && (
-                    <LightGallery
-                        container={galleryContainer}
-                        onInit={onInit}
-                        plugins={[lgZoom, lgThumbnail]}
-                        closable={false}
-                        showMaximizeIcon={true}
-                        slideDelay={400}
-                        thumbWidth={130}
-                        thumbHeight={'100px'}
-                        thumbMargin={6}
-                        appendSubHtmlTo={'.lg-item'}
-                        dynamic={true}
-                        dynamicEl={dynamicEl}
-                        hash={false}
-                        elementClassNames={'inline-gallery-container'}
-                    />
-                )}
+                <LightGallery
+                    container={containerRef.current as HTMLElement}
+                    onInit={onInit}
+                    plugins={[lgZoom, lgThumbnail]}
+                    closable={false}
+                    showMaximizeIcon={true}
+                    slideDelay={400}
+                    thumbWidth={130}
+                    thumbHeight={'100px'}
+                    thumbMargin={6}
+                    appendSubHtmlTo={'.lg-item'}
+                    dynamic={true}
+                    dynamicEl={dynamicEl}
+                    hash={true}
+                    elementClassNames={'inline-gallery-container'}
+                ></LightGallery>
             </div>
         </div>
     );
