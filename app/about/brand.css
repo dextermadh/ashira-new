@@ -1,0 +1,77 @@
+.page-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.IntroAbout{
+    font-size: 350px;
+    letter-spacing: -0.02em; 
+    color: black;
+}
+
+.BackgroundImgAbout {
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+.BackgroundImgAbout1 {
+    object-fit: cover;
+
+    object-position: 50% 20%;
+}
+
+/* brand */
+
+.pText {
+    font-family: Bebas;
+    font-size: 25px;
+    text-transform: lowercase;
+}
+
+.DesText {
+    padding: 0 100px;
+    font-size: 20px;
+    font-family: "MonteLight";
+    text-transform: capitalize;
+    margin: 20px;
+}
+.DesText1 {
+    padding: 0 90px;
+    font-size: 20px;
+    font-family: "MonteLight";
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .IntroAbout {
+        font-size: 100px;
+        letter-spacing: -0.02em; 
+        color: black;
+    }
+
+    .content {
+        
+    }
+
+    .BackgroundImg {
+        width: 100px;
+        object-fit: none;
+    }
+
+    .DesText {
+        padding: 0 20px;
+        font-size: 20px;
+        margin-top: -7vh;
+        margin-bottom: -10vh;
+    }
+    .DesText1 {
+        margin-top: -4vh;
+        padding: 0 20px;
+        font-size: 20px;
+        margin-bottom: -10vh;
+    }
+}

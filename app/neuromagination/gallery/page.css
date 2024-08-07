@@ -1,0 +1,14 @@
+.NeuroG {
+    font-size:150px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+  }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .NeuroG {
+    font-size: 30px;
+  }
+
+}
+

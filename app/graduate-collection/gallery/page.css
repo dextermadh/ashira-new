@@ -1,0 +1,11 @@
+.font2 {
+    font-size:100px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+  }
+
+  @media (max-width: 768px) { 
+    .font2 {
+      font-size: 25px;
+    }
+  }

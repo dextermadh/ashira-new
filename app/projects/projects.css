@@ -1,0 +1,142 @@
+.page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fontProject {
+    font-size: 400px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+}
+
+
+
+.modalContainer{
+    height: 350px;
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalSlider{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img{
+    height: auto;
+}
+
+.cursor, .cursorLabel{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #455CE9;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.cursorLabel{
+    background-color: transparent;
+}
+
+.project{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+    border-top: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.project:last-of-type{
+    border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.project:hover{
+    opacity: 0.5;
+}
+
+.project:hover h2{
+    transform: translateX(-10px);
+}
+
+.project:hover p{
+    transform: translateX(10px);
+}
+
+.project h2{
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 400;
+    transition: all 0.4s;
+}
+
+.project p{
+    transition: all 0.4s;
+    font-weight: 300;
+}
+
+/* Adjustments for mobile screens */
+  @media (max-width: 768px) {
+
+    .fontProject {
+        font-size: 120px; /* Smaller font-size for mobile screens */
+      }
+    
+
+    .projectMain {
+        margin-top: -40vh;
+        margin-bottom: 30vh;
+    }
+    .modalContainer {
+      width: 90%;
+      height: auto;
+      border-radius: 10px;
+      padding: 20px;
+    }
+  
+    .cursor, .cursorLabel {
+      width: 50px;
+      height: 50px;
+      font-size: 12px;
+    }
+  
+    .project {
+      padding: 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project h2 {
+      font-size: 100px;
+    }
+  
+    .project p {
+      font-size: 16px; /* Smaller font-size for mobile */
+    }
+  }

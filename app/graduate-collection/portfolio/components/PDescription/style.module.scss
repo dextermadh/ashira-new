@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Monte';
+    src: url(../../../../../public//fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.description{
+    padding-left: 200px;
+    padding-right: 200px;
+    
+    margin-bottom: 20vh;
+    display: flex;
+    justify-content: center;
+    .body{
+        max-width: 1400px;
+        display: flex;
+        gap: 50px;
+        position: relative;
+        
+        p{
+            margin: 40px;
+            text-transform: capitalize;
+            font-size: 20px;
+            width: 100%;
+            font-weight: 200;
+            font-family: 'Monte';
+            
+        }
+        }
+        .button{
+            top: 80%;
+            left: calc(100% - 200px); 
+            width: 180px;
+            height: 180px;
+            background: #dbc5ab;
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            p{
+                margin: 0px;
+                font-size: 20px;
+                font-weight: 300;
+                position: relative;
+                z-index: 1;
+
+            }
+        }
+    }
+    .moreWork{
+        padding: 20px;
+        border-radius: 40px;
+        border: 1px solid grey;
+    }
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .description {
+        padding-left: 30px;
+        padding-right:30px;
+        margin-top: 200px;
+        margin-bottom: -70px;
+    }
+
+    .description .body {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 40px;
+    }
+
+    .description .body p {
+        font-size: 15px; /* Smaller font size for headings */
+        margin-top: -30vh;
+    }
+
+    
+
+    .description .body .button {
+        position: relative; /* Adjust positioning */
+        top: auto;
+        left: auto;
+        margin-top: 20px; /* Add some spacing */
+        width: 100px; /* Smaller button size */
+        height: 100px;
+    }
+
+    .description .moreWork {
+        width: 100%;
+        text-align: center; /* Center-align the content */
+    }
+}

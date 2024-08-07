@@ -1,0 +1,65 @@
+
+body{
+  margin: 0px;
+}
+
+.page-contentNeuro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20vh;
+}
+.containerNeuro {
+  margin-top: -20vh;
+  margin-bottom: 20vh;
+  
+}
+
+
+.NeuroFont {
+  font-size: 220px;
+  letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  color: #000;
+}
+
+
+.cardN {
+  background-image: url(../../public/assets/Neuromagination/8V8A6486.jpg);
+  background-size: cover;
+}
+
+.cardN::before{
+  background-image: url(../../public/assets/Neuromagination/8V8A6481.jpg);
+}
+
+.cardN:hover {
+  background-image: url(../../public/assets/Neuromagination/8V8A6481.jpg);
+}
+
+.cardN3 {
+  background-image: url(../../public/assets/Neuromagination/8V8A6198.jpg);
+  background-size: cover;
+}
+
+.cardN3::before{
+  background-image: url(../../public/assets/Neuromagination/8V8A6206.jpg);
+}
+
+.cardN3:hover {
+  background-image: url(../../public/assets/Neuromagination/8V8A6206.jpg);
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .NeuroFont {
+    font-size: 55px;
+  }
+  .page-contentNeuro{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    margin-bottom: 70vh;
+  }
+}

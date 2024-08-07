@@ -1,0 +1,367 @@
+
+
+.contact {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #efe5d9;
+    position: relative;
+    margin-top: 500px;
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+
+    .body {
+        flex: 1; /* Allow the body to take up available space */
+        padding-top: 200px;
+        width: 100%;
+        max-width: 1800px;
+        background: white;
+
+        .title {
+            border-bottom: 1px solid rgb(134, 134, 134);
+            padding-bottom: 100px;
+            margin: 0 200px;
+            position: relative;
+
+            span {
+                display: flex;
+                align-items: center;
+
+                .imageContainer {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        object-fit: cover;
+                        object-position: 50% 20%;
+                    }
+                }
+
+                h2 {
+                    margin-left: 0.3em;
+                }
+            }
+
+            h2 {
+                font-size: 6vw;
+                margin: 0;
+                font-weight: 300;
+            }
+
+            .buttonContainer {
+                position: absolute;
+                left: calc(100% - 400px);
+                top: calc(100% - 75px);
+            }
+
+            .button {
+                width: 180px;
+                height: 180px;
+                background: #dbc5ab;
+                color: white;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                p {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 300;
+                    z-index: 2;
+                    position: relative;
+                    
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: 30%;
+                left: 100%;
+            }
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin: 100px 200px 0;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 200px;
+            padding: 20px;
+            font-size: 20px;
+
+            div {
+                display: flex;
+                gap: 10px;
+                align-items: flex-end;
+                
+
+                p, h3, a {
+                    margin: 0;
+                    padding: 2.5px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    text-decoration: none;
+
+                }
+
+                p {
+                    &::after {
+                        content: "";
+                        width: 0%;
+                        height: 1px;
+                        background-color: white;
+                        display: block;
+                        margin-top: 2px;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: width 0.2s linear;
+                    }
+
+                    &:hover {
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px; 
+     
+                }
+
+                h3 {
+                    color: grey;
+                    cursor: default;
+                    font-weight: 300;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    // Media Queries
+    @media (max-width: 480px) {
+        margin-top: 300px;
+
+        .body {
+            padding-top: 150px;
+            margin: 0 100px;
+
+            .title {
+                margin: 0;
+                padding-bottom: 70px;
+
+                span {
+                    flex-direction: column; // Stack vertically for medium screens
+                    align-items: center;
+                    text-align: center;
+
+                    .imageContainer {
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                    h2 {
+                        font-size: 5vw;
+                    }
+                }
+
+                h2 {
+                    font-size: 5vw;
+                }
+
+                .buttonContainer {
+                    left: 50%;
+                    top: 120%;
+                    transform: translateX(-50%);
+                }
+
+                .button {
+                    width: 160px;
+                    height: 160px;
+                    font-size: 14px;
+                }
+
+                svg {
+                    width: 7vw;
+                    height: 7vw;
+                }
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin: 50px 0;
+            }
+
+            .info {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                margin-top: 25vh;
+                font-size: 25px;
+
+                div {
+                    gap: 10px;
+
+                    a, h3 {
+                        font-size: 0.9em;
+
+                    }
+
+                    span {
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 200px;
+        overflow: hidden;
+
+        .body {
+            padding-top: 100px;
+            margin: 0 50px;
+
+            .title {
+                padding-bottom: 40px;
+
+                .imageContact {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                span {
+                    .imageContainer {
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    h2 {
+                        font-size: 4vw;
+                    }
+                }
+
+                h2 {
+                    font-size: 4vw;
+                }
+
+                .buttonContainer {
+                    top: 140%;
+                }
+
+                .button {
+                    width: 140px;
+                    height: 140px;
+                    font-size: 12px;
+                }
+
+                svg {
+                    width: 5vw;
+                    height: 5vw;
+                }
+            }
+
+            .nav {
+                gap: 50px;
+                margin: 40px 0;
+            }
+
+            .info {
+                div {
+                    gap: 5px;
+
+                    p, h3 {
+                        font-size: 6em;
+                    }
+
+                    span {
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        
+
+        .body {
+            
+            margin: 0 20px;
+
+            .title {
+                padding-bottom: 20px;
+
+                span {
+                    .imageContainer {
+                        width: 150px;
+                        height: 150px;
+                    }
+
+                    h2 {
+                        font-size: 10.5vw;
+                    }
+                }
+
+                h2 {
+                    margin-left: 5vw;
+                    font-size: 10.5vw;
+                }
+
+                .buttonContainer {
+                    top: 160%;
+                }
+
+                .button {
+                    width: 120px;
+                    height: 120px;
+                    font-size: 10px;
+                }
+
+                svg {
+                    width: 4vw;
+                    height: 4vw;
+                }
+            }
+
+            .nav {
+                gap: 20px;
+                margin: 30px 0;
+            }
+
+            .info {
+                div {
+                    gap: 2px;
+
+                    p, h3 {
+                        font-size: 0.7em;
+                    }
+
+                    span {
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

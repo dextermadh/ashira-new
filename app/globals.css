@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+	font-family: BebasNue;
+	src: url('../public/fonts/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+  font-family: BD;
+  src: url('../public/assets/font/Brittaney-Memories-BF6452bc32382bc.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: MonteLight;
+  src: url('../public/fonts/Montserrat-Light.ttf');
+}
+
+
+@font-face {
+  font-family: Monte;
+  src: url('../public/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "BebasNue";
+}
+
+body {
+  font-family: "BebasNue";
+  background: rgb(242, 237, 229);
+
+}
+
+a, p {
+  color: rgb(70, 69, 69);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 6em 2em;
+}
+
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font1 {
+  font-size: 250px;
+}
+
+.fontHero {
+  font-size: 100px;
+}
+
+.velocityScroll {
+  font-size: 100px;
+}
+
+/* ScrolltoTopButton */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.btn-scroll-top {
+  background-color: rgb(236, 216, 184);
+  border: none;
+  border-radius: 50%;
+  padding:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-scroll-top:hover {
+  background-color: rgb(218, 198, 170);
+}
+
+
+
+
+

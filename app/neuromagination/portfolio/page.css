@@ -1,0 +1,21 @@
+.fontNPortfolio {
+    font-size: 130px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+  }
+
+  @media (max-width: 1200px) { 
+    .fontNPortfolio {
+        font-size: 30px;
+        letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+        color: #000;
+      }
+  }
+  
+  @media (max-width: 480px) { 
+    .fontNPortfolio {
+        font-size: 30px;
+        letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+        color: #000;
+      }
+  }

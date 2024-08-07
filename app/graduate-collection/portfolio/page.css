@@ -1,0 +1,227 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.intro-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.deck-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures the section takes at least the full viewport height */
+}
+
+.fontPortfolio {
+  font-size: 120px;
+  letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  color: #000;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px; /* Space between the images */
+    padding: 16px; /* Optional padding around the grid */
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .image-loaded .image {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .full-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* High z-index to ensure it overlays everything */
+  }
+  
+  .full-screen-image-wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .full-screen-image {
+    object-fit: contain;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the image */
+    font-size: 24px;
+  }
+  
+  .prev-button {
+    left: 20px;
+  }
+  
+  .next-button {
+    right: 20px;
+  }
+
+
+  .page-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px; /* Space between the images */
+    padding: 16px; /* Optional padding around the grid */
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .image-loaded .image {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .full-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* High z-index to ensure it overlays everything */
+  }
+  
+  .full-screen-image-wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .full-screen-image {
+    object-fit: contain;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above the image */
+    font-size: 24px;
+  }
+  
+  .prev-button {
+    left: 20px;
+  }
+  
+  .next-button {
+    right: 20px;
+  }
+
+  .des {
+    margin-top: -40vh;
+  }
+
+
+
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .page-content {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      gap: 8px; /* Reduce gap between images */
+      padding: 8px; /* Reduce padding around the grid */
+    }
+  
+    .full-screen-image-wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
+  
+    .nav-button {
+      font-size: 18px;
+      padding: 8px;
+    }
+    .fontPortfolio {
+      font-size: 25px;
+      letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+      color: #000;
+    }
+  }
+
+  
