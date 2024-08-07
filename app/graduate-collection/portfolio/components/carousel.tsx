@@ -37,7 +37,7 @@ const images = [
     // Add other images manually
 ];
 
-export const Carousel3: FC<{ name: string }> = ({ name }) => {
+export const Carousel: FC<{ name: string }> = ({ name }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [galleryContainer, setGalleryContainer] = useState<ILightGallery | null>(null);
 
