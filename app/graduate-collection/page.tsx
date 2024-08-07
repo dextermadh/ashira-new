@@ -1,12 +1,10 @@
 'use client';
 import { useEffect } from 'react';
 import './page.css';
-import { GCardDemo } from './components/GCard';
-import { GCardDemo2 } from './components/GCard2';
-import { GCardDemo3 } from './components/GCard3';
 import Link from 'next/link';
 import { GradualSpacingDemo10, IntroGraduateCollection } from './components/GradualSpacing';
 import Lenis from '@studio-freight/lenis';
+import Card from '@/components/Card/Card';
 
 export default function Home() {
   useEffect(() => {
@@ -37,13 +35,13 @@ export default function Home() {
       <div className="page-content">
         <div className="container1">
           <Link href="graduate-collection/portfolio">
-            <GCardDemo />
+          <Card imageSrc='/assets/FASHION_SHOOT_3/p (25).jpg' text='Portfolio'/>
           </Link>
           <Link href="graduate-collection/look-book">
-            <GCardDemo2 />
+          <Card imageSrc='/assets/FASHION_SHOOT_3/p (45).jpg' text='Lookbook'/>
           </Link>
           <Link href="graduate-collection/gallery">
-            <GCardDemo3 />
+          <Card imageSrc='/assets/FASHION_SHOOT_3/p (54).jpg' text='Gallery'/>
           </Link>
         </div>
       </div>

@@ -1,0 +1,57 @@
+.card {
+    position: relative;
+    /*Positionrelativetopositiontheoverlay*/border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+    max-width: 300px;
+    margin: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image styling */
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Overlay styling */
+  .card::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Make sure it sits above the image */
+  }
+  
+  .card:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
+  /* Text styling */
+  .text {
+    font-family: "MonteLight", sans-serif; /* Ensure fallback font is available */
+    padding: 16px;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    z-index: 2; /* Ensure text stays above the overlay */
+    position: relative; /* Position relative to keep it above the overlay */
+  }
+  .text:hover {
+    color: white;
+  }

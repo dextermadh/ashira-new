@@ -2,10 +2,9 @@
 import { useEffect } from 'react';
 import './page.css';
 import Lenis from '@studio-freight/lenis';
-import { NCardDemo } from './components/NCard';
-import { NCardDemo3 } from './components/NCard3';
 import Link from 'next/link';
 import { GradualSpacingDemo11, IntroNeuromagination } from './components/GradualSpacing';
+import Card from '@/components/Card/Card';
 
 export default function Home() {
   useEffect(() => {
@@ -36,10 +35,10 @@ export default function Home() {
       <div className="containerNeuro">
         <div className="page-contentNeuro">
           <Link href="neuromagination/portfolio">
-            <NCardDemo />
+            <Card imageSrc='/assets/Neuromagination/8V8A6486.JPG' text='Portfolio'/>
           </Link>
           <Link href="neuromagination/gallery">
-            <NCardDemo3 />
+          <Card imageSrc='/assets/Neuromagination/8V8A6198.JPG' text='Gallery'/>
           </Link>
         </div>
       </div>

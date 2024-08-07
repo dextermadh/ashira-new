@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Footer.tsx", "components/preloader/anim.js", "components/Footer/Footer.jsx", "components/ProjectCard/projectCard.tsx", "app/collaborate/components/form.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/Footer.tsx", "components/preloader/anim.js", "components/Footer/Footer.jsx", "components/ProjectCard/projectCard.tsx", "app/collaborate/components/form.jsx", "app/graduate-collection/portfolio/components/carousel.tsx"],
   "exclude": ["node_modules"]
 }

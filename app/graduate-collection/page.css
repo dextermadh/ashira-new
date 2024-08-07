@@ -31,39 +31,20 @@ body{
   background-size: cover;
 }
 
-.card::before{
-  background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(21\).jpg);
-}
 
-.card:hover {
-  background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(21\).jpg);
-}
 
 .card2 {
   background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(45\).jpg);
   background-size: cover;
 }
 
-.card2::before{
-  background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(44\).jpg);
-}
-
-.card2:hover {
-  background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(44\).jpg);
-}
 
 .card3 {
   background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(54\).jpg);
   background-size: cover;
 }
 
-.card3::before{
-  background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(56\).jpg);
-}
 
-.card3:hover {
-  background-image: url(../../public/assets/FASHION_SHOOT_3/p\ \(56\).jpg);
-}
 
 
 @media (max-width: 768px) { 
@@ -71,6 +52,7 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: -20vh;
+    margin-bottom: 25vh;
   }
 
   .card3 {

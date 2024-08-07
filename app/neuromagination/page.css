@@ -27,28 +27,16 @@ body{
 .cardN {
   background-image: url(../../public/assets/Neuromagination/8V8A6486.jpg);
   background-size: cover;
+
 }
 
-.cardN::before{
-  background-image: url(../../public/assets/Neuromagination/8V8A6481.jpg);
-}
-
-.cardN:hover {
-  background-image: url(../../public/assets/Neuromagination/8V8A6481.jpg);
-}
 
 .cardN3 {
   background-image: url(../../public/assets/Neuromagination/8V8A6198.jpg);
   background-size: cover;
 }
 
-.cardN3::before{
-  background-image: url(../../public/assets/Neuromagination/8V8A6206.jpg);
-}
 
-.cardN3:hover {
-  background-image: url(../../public/assets/Neuromagination/8V8A6206.jpg);
-}
 
 
 /* Mobile Styles */
