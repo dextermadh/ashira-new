@@ -35,8 +35,8 @@ export default function Home() {
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <IntroGraduateCollection />
-        <div className="page-content">
-          <div className="container1">
+        <div className="containerGG">
+          <div className="page-contentGG">
             <Link href="graduate-collection/portfolio" passHref>
               <Card imageSrc='/assets/FASHION_SHOOT_3/p (25).jpg' text='Portfolio'/>
             </Link>

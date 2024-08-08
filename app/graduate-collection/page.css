@@ -4,19 +4,16 @@ body{
   margin: 0px;
 }
 
-.page-content{
+.page-contentGG{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  flex-direction: column;
+  margin-bottom: 20vh;
 }
-.container1 {
-  margin-top: -50vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
+.containerGG {
+  margin-top: -20vh;
+  margin-bottom: 20vh;
 }
 
 
@@ -35,11 +32,11 @@ body{
 
 
 @media (max-width: 768px) { 
-  .container1 {
+  .page-contentGG{
     display: flex;
     flex-direction: column;
-    margin-top: -20vh;
-    margin-bottom: 25vh;
+    margin-top: 30vh;
+    margin-bottom: 70vh;
   }
 
   .card3 {
