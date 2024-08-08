@@ -12,6 +12,9 @@ const GradualSpacingDemo11 = memo(() => (
   />
 ));
 
+// Set display name for the memoized component
+GradualSpacingDemo11.displayName = 'GradualSpacingDemo11';
+
 export function IntroNeuromagination() {
   const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
