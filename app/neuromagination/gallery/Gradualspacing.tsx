@@ -13,6 +13,9 @@ export function GradualSpacingDemo5() {
   );
 }
 
+// Add a display name to the GradualSpacingDemo5 component
+GradualSpacingDemo5.displayName = "GradualSpacingDemo5";
+
 export function IntroNeuromaginationGallery() {
   const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -35,3 +38,6 @@ export function IntroNeuromaginationGallery() {
     </div>
   );
 }
+
+// Add a display name to the IntroNeuromaginationGallery component
+IntroNeuromaginationGallery.displayName = "IntroNeuromaginationGallery";

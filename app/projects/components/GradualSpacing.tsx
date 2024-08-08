@@ -14,6 +14,9 @@ const GradualSpacingDemo1: React.FC = React.memo(() => {
   );
 });
 
+// Set display name for GradualSpacingDemo1
+GradualSpacingDemo1.displayName = "GradualSpacingDemo1";
+
 // Main component for the intro section with scroll-based animation
 export function IntroProjects() {
   const container = useRef<HTMLDivElement>(null);
@@ -42,3 +45,6 @@ export function IntroProjects() {
     </div>
   );
 }
+
+// Set display name for IntroProjects
+IntroProjects.displayName = "IntroProjects";

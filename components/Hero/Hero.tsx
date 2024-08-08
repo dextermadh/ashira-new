@@ -10,11 +10,11 @@ import { slideUp } from './animation';
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const stickyMaskRef = useRef<HTMLDivElement | null>(null);
+  const easedScrollProgressRef = useRef(0.05); // Use useRef to keep track of easedScrollProgress
 
   const initialMaskSize = 0.8;
   const targetMaskSize = 80;
   const easing = 0.15;
-  let easedScrollProgress = 0.05;
 
   useEffect(() => {
     const animate = () => {
@@ -29,9 +29,9 @@ export default function Home() {
       if (stickyMaskRef.current && containerRef.current) {
         const scrollProgress =
           window.scrollY / (containerRef.current.getBoundingClientRect().height - window.innerHeight);
-        const delta = scrollProgress - easedScrollProgress;
-        easedScrollProgress += delta * easing;
-        return easedScrollProgress;
+        const delta = scrollProgress - easedScrollProgressRef.current;
+        easedScrollProgressRef.current += delta * easing;
+        return easedScrollProgressRef.current;
       }
       return 0;
     };
