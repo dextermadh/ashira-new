@@ -2,16 +2,15 @@
 
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 
-export function GradualSpacingDemo11() {
-  return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] NeuroFont"
-      text="Neuromagination"
-    />
-  );
-}
+// Memoize GradualSpacingDemo11 to prevent unnecessary re-renders
+const GradualSpacingDemo11 = memo(() => (
+  <GradualSpacing
+    className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] NeuroFont"
+    text="Neuromagination"
+  />
+));
 
 export function IntroNeuromagination() {
   const container = useRef<HTMLDivElement | null>(null);

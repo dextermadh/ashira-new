@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { GradualSpacingDemo4, IntroTechnicalDevelopments } from "./components/GradualSpacingDemo4";
 import "./page.css";
-import { Carousel3 } from "../technical-developments/components/carousel/caorusel";
+import Carousel3  from "../technical-developments/components/carousel/caorusel";
 import Lenis from 'lenis';
 
 const Page = () => {
@@ -32,7 +32,10 @@ const Page = () => {
   return (
     <div className="">
       <IntroTechnicalDevelopments />
+      <div className="carouselContainer">
       <Carousel3 name="technical-developments" />
+      </div>
+      
     </div>
   );
 };

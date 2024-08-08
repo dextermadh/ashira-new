@@ -1,9 +1,10 @@
 'use client';
+
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Picture1 from "../public/assets/PNG- RGB DIigtal and Print.png";
 import Lenis from 'lenis';
 import './velocityscroll.css';
-import Image, { StaticImageData } from 'next/image'; // Import StaticImageData
+import Image, { StaticImageData } from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function VelocityScroll() {
@@ -22,6 +23,8 @@ export default function VelocityScroll() {
     }
 
     requestAnimationFrame(raf);
+
+    return () => lenis.destroy(); // Clean up Lenis on unmount
   }, []);
 
   return (
@@ -38,10 +41,10 @@ export default function VelocityScroll() {
 }
 
 interface SlideProps {
-  src: StaticImageData; // Use StaticImageData for images
+  src: StaticImageData;
   direction: 'left' | 'right';
   left: string;
-  progress: any; // Adjust this to the correct type if known
+  progress: any;
 }
 
 const Slide = (props: SlideProps) => {
@@ -51,29 +54,36 @@ const Slide = (props: SlideProps) => {
   return (
     <motion.div style={{ x: translateX, left: props.left }} className="relative flex whitespace-nowrap">
       <Phrase src={props.src} />
-      <Phrase src={props.src} />
-      <Phrase src={props.src} />
     </motion.div>
   );
 }
 
 interface PhraseProps {
-  src: StaticImageData; // Use StaticImageData for images
+  src: StaticImageData;
 }
 
 const Phrase = ({ src }: PhraseProps) => {
   return (
     <div className="cotainerV">
       <div className={'px-5 flex gap-5 items-center '}>
-        <p className='text-[7.5vw] text'>EESAMO</p> 
-        <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden image">
-          <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
-        </span>
-        <p className='text-[7.5vw] text'>EESAMO</p>
-        <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden image">
-          <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
-        </span>
+        <TextImagePair src={src} />
+        <TextImagePair src={src} />
+        <TextImagePair src={src} />
+        <TextImagePair src={src} />
+        <TextImagePair src={src} />
+        <TextImagePair src={src} />
       </div>
     </div>
+  );
+}
+
+const TextImagePair = ({ src }: PhraseProps) => {
+  return (
+    <>
+      <p className='text-[7.5vw] text'>EESAMO</p>
+      <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden image">
+        <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
+      </span>
+    </>
   );
 }

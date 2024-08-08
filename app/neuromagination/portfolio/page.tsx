@@ -2,10 +2,8 @@
 import { useEffect } from 'react';
 import './page.css';
 import Lenis from '@studio-freight/lenis';
-import Image from 'next/image';
-import { Carousel2 } from './components/carousel/carousel';
+import Carousel2  from './components/carousel/carousel';
 import { IntroNeuromaginationPortfolio } from './components/GradualSpacing';
-import PortfolioDescription from '@/app/graduate-collection/portfolio/components/PDescription/portfolioDesciption';
 
 export default function Home() {
   useEffect(() => {
@@ -33,8 +31,10 @@ export default function Home() {
   return (
     <div>
       <IntroNeuromaginationPortfolio />
-      <PortfolioDescription text={"This Conceptual Development was created and implemented during the second year of study, drawing inspiration from the inexhaustible human power to imagine."}/>
+      <div className="carouselContainer">
       <Carousel2 name='sajkdn'/>
+      </div>
+      
     </div>
   );
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -24,7 +24,7 @@ export function IntroAbout() {
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
   return (
-    <div className='h-screen overflow-hidden'>
+    <div ref={container} className='h-screen overflow-hidden'>
       <motion.div
         style={{ y }}
         className='relative h-full flex items-center justify-center'

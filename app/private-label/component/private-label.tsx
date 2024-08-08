@@ -41,7 +41,7 @@ export function Description3() {
       <div className='flex justify-center my-40'>
           <p className='text-[4.5vw] lowercase text-center  DesText1'>
           The Sri Lankan fashion brand is launched in 2023.
-The luxury label features styles with elegance, timelessness and glamour with a modem twist and it focuses on encouraging internationally recognized styles.
+The luxury label features styles with elegance, timelessness and glamour with a modern twist and it focuses on encouraging internationally recognized styles.
 
 
 </p>

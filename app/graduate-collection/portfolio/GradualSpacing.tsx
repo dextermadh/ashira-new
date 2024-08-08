@@ -1,15 +1,17 @@
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 
-export function GradualSpacingDemo11() {
-  return (
-    <GradualSpacing
+// Memoize the GradualSpacingDemo11 component to avoid unnecessary re-renders
+const GradualSpacingDemo11 = memo(() => (
+   <GradualSpacing
       className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] fontPortfolio"
       text="Graduate Collection|Portfolio"
     />
-  );
-}
+));
+
+// Add a display name for easier debugging
+GradualSpacingDemo11.displayName = 'GradualSpacingDemo11';
 
 export function IntroGraduateCollectionPortfolio() {
   const container = useRef<HTMLDivElement | null>(null);
@@ -18,7 +20,7 @@ export function IntroGraduateCollectionPortfolio() {
     offset: ['start start', 'end start']
   });
 
-  // Define the y transform with smoother transition values
+  // Memoize the y transform to improve performance
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
   return (

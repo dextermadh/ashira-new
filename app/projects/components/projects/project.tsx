@@ -18,6 +18,7 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ index, title, setModal, link 
       onMouseEnter={() => setModal({ active: true, index })}
       onMouseLeave={() => setModal({ active: false, index })}
       className={styles.project}
+      aria-label={`Project: ${title}`} // Improve accessibility with aria-label
     >
       <h2>{title}</h2>
       <p>Design and Development</p>

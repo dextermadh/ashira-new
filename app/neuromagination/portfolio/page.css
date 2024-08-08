@@ -19,3 +19,7 @@
         color: #000;
       }
   }
+
+.carouselContainer {
+  overflow: hidden;
+}

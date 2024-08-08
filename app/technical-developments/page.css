@@ -16,3 +16,7 @@
     }
 }
 
+
+.carouselContainer {
+    overflow: hidden;
+}

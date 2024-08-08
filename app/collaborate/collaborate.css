@@ -4,9 +4,6 @@
     justify-content: center;
 }
 
-.collaborate {
-
-}
 
 .font2 {
     font-size: 300px;
@@ -14,13 +11,12 @@
     color: black;
 }
 
-.container {
-}
+
 
 
 @media (max-width: 767px) { 
     .font2 {
-      font-size: 100px;
+      font-size: 60px;
     }
 
     .BcardContainer {

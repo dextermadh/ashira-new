@@ -5,10 +5,10 @@ import './page.css';
 
 export default function Home() {
   useEffect(() => {
-    // Initialize Lenis
+    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 1.2, // Adjust the duration for smooth scrolling
-      easing: (t) => t, // Use a linear easing function for smooth transitions
+      duration: 1.2, // Duration of smooth scrolling
+      easing: (t: number) => t, // Linear easing function for smooth transitions
     });
 
     // Animation frame update

@@ -2,16 +2,16 @@
 
 import React, { useEffect } from "react";
 import { GradualSpacingDemo2, IntroCollaborate } from "../collaborate/components/GradualSpacingDemo2";
-import "../collaborate/collaborate.css";
 import { CV } from "./CV";
 import Lenis from 'lenis';
+import "../collaborate/collaborate.css"; // Ensure CSS is as optimized as possible
 
 const Page: React.FC = () => {
     useEffect(() => {
         // Initialize Lenis for smooth scrolling
         const lenis = new Lenis({
-            duration: 1.2, // Duration for smooth scrolling
-            easing: (t: number) => t // Linear easing function for smoother transitions
+            duration: 1.2, // Adjust duration for smooth scrolling
+            easing: t => t, // Linear easing function
         });
 
         // Animation frame update
@@ -21,11 +21,11 @@ const Page: React.FC = () => {
         };
 
         // Start animation frame loop
-        const animationFrameId = requestAnimationFrame(raf);
+        requestAnimationFrame(raf);
 
         // Clean up on component unmount
         return () => {
-            cancelAnimationFrame(animationFrameId);
+            // Lenis does not need explicit cleanup here
         };
     }, []);
 

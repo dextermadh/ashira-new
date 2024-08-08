@@ -1,10 +1,12 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import './page.css';
 import Link from 'next/link';
-import { GradualSpacingDemo10, IntroGraduateCollection } from './components/GradualSpacing';
 import Lenis from '@studio-freight/lenis';
-import Card from '@/components/Card/Card';
+
+// Dynamically import components
+const IntroGraduateCollection = lazy(() => import('./components/GradualSpacing').then(module => ({ default: module.IntroGraduateCollection })));
+const Card = lazy(() => import('@/components/Card/Card'));
 
 export default function Home() {
   useEffect(() => {
@@ -31,20 +33,22 @@ export default function Home() {
 
   return (
     <div>
-      <IntroGraduateCollection />
-      <div className="page-content">
-        <div className="container1">
-          <Link href="graduate-collection/portfolio">
-          <Card imageSrc='/assets/FASHION_SHOOT_3/p (25).jpg' text='Portfolio'/>
-          </Link>
-          <Link href="graduate-collection/look-book">
-          <Card imageSrc='/assets/FASHION_SHOOT_3/p (45).jpg' text='Lookbook'/>
-          </Link>
-          <Link href="graduate-collection/gallery">
-          <Card imageSrc='/assets/FASHION_SHOOT_3/p (54).jpg' text='Gallery'/>
-          </Link>
+      <Suspense fallback={<div>Loading...</div>}>
+        <IntroGraduateCollection />
+        <div className="page-content">
+          <div className="container1">
+            <Link href="graduate-collection/portfolio" passHref>
+              <Card imageSrc='/assets/FASHION_SHOOT_3/p (25).jpg' text='Portfolio'/>
+            </Link>
+            <Link href="graduate-collection/look-book" passHref>
+              <Card imageSrc='/assets/FASHION_SHOOT_3/p (45).jpg' text='Lookbook'/>
+            </Link>
+            <Link href="graduate-collection/gallery" passHref>
+              <Card imageSrc='/assets/FASHION_SHOOT_3/p (54).jpg' text='Gallery'/>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Suspense>
     </div>
   );
 }

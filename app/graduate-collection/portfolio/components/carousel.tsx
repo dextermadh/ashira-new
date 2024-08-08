@@ -3,8 +3,7 @@ import LightGallery from 'lightgallery/react';
 import lgZoom from 'lightgallery/plugins/zoom';
 import './Cards/style.scss';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
- // Make sure to import your HeaderComponent
- import { LightGallery as ILightGallery } from 'lightgallery/lightgallery';
+import PortfolioDescription from './PDescription/portfolioDesciption'; // Fixed typo
 
 const images = [
     '/assets/Website Required Content/PROJECTS/Graduate Collection/PORTFOLIO/Portfolio Pages JPEG/Graduate Portfolio Digital Submission-01.jpg',
@@ -37,57 +36,65 @@ const images = [
     // Add other images manually
 ];
 
-export const Carousel: FC<{ name: string }> = ({ name }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [galleryContainer, setGalleryContainer] = useState<ILightGallery | null>(null);
+const Carousel: FC<{ name: string }> = ({ name }) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [galleryContainer, setGalleryContainer] = useState<string | null>(null);
 
-  const onInit = useCallback((detail: { instance: ILightGallery }) => {
-      if (detail) {
-          detail.instance.openGallery();
-      }
-  }, []);
-
-  // Generate dynamicEl data from images array
-  const dynamicEl = images.map((src, index) => ({
-      src,
-      thumb: src,
-      subHtml: `<div class="lightGallery-captions">
-                  <h4>Portfolio Page ${index + 1}</h4>
-                </div>`,
-  }));
-
-  useEffect(() => {
-      if (containerRef.current) {
-        setGalleryContainer('aaa' as unknown as ILightGallery);
-      }
+    const onInit = useCallback((detail: { instance: any }) => {
+        if (detail && detail.instance) {
+            detail.instance.openGallery();
+        }
     }, []);
-    console.log(containerRef.current);
 
-  return (
-      <div className="App">
-          <div
-              style={{ height: '800px' }}
-              ref={containerRef}
-          ></div>
-          <div>
-              <LightGallery
-                  container={containerRef.current as HTMLElement}
-                  onInit={onInit}
-                  plugins={[lgZoom, lgThumbnail]}
-                  closable={false}
-                  showMaximizeIcon={true}
-                  slideDelay={400}
-                  thumbWidth={130}
-                  thumbHeight={'100px'}
-                  thumbMargin={6}
-                  appendSubHtmlTo={'.lg-item'}
-                  dynamic={true}
-                  dynamicEl={dynamicEl}
-                  hash={true}
-                  elementClassNames={'inline-gallery-container'}
-              ></LightGallery>
-          </div>
-      </div>
-  );
+    useEffect(() => {
+        if (containerRef.current) {
+            setGalleryContainer('aaa'); // Set to a string or null as needed
+        }
+    }, []);
+
+    const dynamicEl = images.map((src, index) => ({
+        src,
+        thumb: src,
+        subHtml: `<div class="lightGallery-captions">
+                    <h4>Portfolio Page ${index + 1}</h4>
+                  </div>`,
+    }));
+
+    return (
+        <div className="carousel-container">
+            <HeaderComponent />
+            <div
+                style={{ height: '800px' }}
+                ref={containerRef}
+            >
+                <LightGallery
+                    container={containerRef.current as HTMLElement}
+                    onInit={onInit}
+                    plugins={[lgZoom, lgThumbnail]}
+                    closable={false}
+                    showMaximizeIcon={true}
+                    slideDelay={400}
+                    thumbWidth={130}
+                    thumbMargin={6}
+                    appendSubHtmlTo={'.lg-item'}
+                    dynamic={true}
+                    dynamicEl={dynamicEl}
+                    hash={true}
+                    elementClassNames={'inline-gallery-container'}
+                />
+            </div>
+        </div>
+    );
 };
 
+const HeaderComponent: FC = () => (
+    <div className="header">
+        <PortfolioDescription
+            text={
+                "This collection is inspired by human emotions and Kintsugi art theories, which I came up with and refined for my final collection during the final year of my studies for (BA) Hons, Fashion Design Degree at Falmouth University, UK."
+            }
+        />
+    </div>
+);
+
+export default Carousel;

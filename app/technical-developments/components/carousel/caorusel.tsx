@@ -5,6 +5,8 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import './style.scss';
 import { LightGallery as ILightGallery } from 'lightgallery/lightgallery';
+import "lightgallery/css/lightgallery-bundle.css";
+import PortfolioDescription from '@/app/graduate-collection/portfolio/components/PDescription/portfolioDesciption';
 
 const images = [
     '/assets/Website Required Content/PROJECTS/CADS for portfolio/1st folder/1.jpg',
@@ -24,17 +26,22 @@ const images = [
     // Add other images manually
 ];
 
-export const Carousel3: FC<{ name: string }> = ({ name }) => {
+const Carousel3: FC<{ name: string }> = ({ name }) => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [galleryContainer, setGalleryContainer] = useState<ILightGallery | null>(null);
-
-    const onInit = useCallback((detail: { instance: ILightGallery }) => {
-        if (detail) {
+    const [galleryContainer, setGalleryContainer] = useState<string | null>(null);
+  
+    const onInit = useCallback((detail: { instance: any }) => {
+        if (detail && detail.instance) {
             detail.instance.openGallery();
         }
     }, []);
-
-    // Generate dynamicEl data from images array
+  
+    useEffect(() => {
+        if (containerRef.current) {
+            setGalleryContainer('aaa'); // Set to a string or null as needed
+        }
+    }, []);
+  
     const dynamicEl = images.map((src, index) => ({
         src,
         thumb: src,
@@ -42,21 +49,14 @@ export const Carousel3: FC<{ name: string }> = ({ name }) => {
                     <h4>Portfolio Page ${index + 1}</h4>
                   </div>`,
     }));
-
-    useEffect(() => {
-        if (containerRef.current) {
-          setGalleryContainer('aaa' as unknown as ILightGallery);
-        }
-      }, []);
-      console.log(containerRef.current);
-
+  
     return (
-        <div className="App">
+        <div className="carousel-container">
+            <HeaderComponent />
             <div
                 style={{ height: '800px' }}
                 ref={containerRef}
-            ></div>
-            <div>
+            >
                 <LightGallery
                     container={containerRef.current as HTMLElement}
                     onInit={onInit}
@@ -65,15 +65,23 @@ export const Carousel3: FC<{ name: string }> = ({ name }) => {
                     showMaximizeIcon={true}
                     slideDelay={400}
                     thumbWidth={130}
-                    thumbHeight={'100px'}
                     thumbMargin={6}
                     appendSubHtmlTo={'.lg-item'}
                     dynamic={true}
                     dynamicEl={dynamicEl}
                     hash={true}
                     elementClassNames={'inline-gallery-container'}
-                ></LightGallery>
+                />
             </div>
         </div>
     );
-};
+  };
+  
+  const HeaderComponent: FC = () => (
+    <div className="header">
+              <PortfolioDescription text={""}/>
+  
+    </div>
+  );
+  
+  export default Carousel3;

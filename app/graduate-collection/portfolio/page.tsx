@@ -1,35 +1,30 @@
 'use client';
-import { useEffect } from 'react';
+
 import './page.css';
-
-import React from 'react';
-import Link from 'next/link';
-import { useState } from 'react';
-
-import Image from 'next/image';
-import { IntroGraduateCollectionPortfolio } from './GradualSpacing';
-import { Carousel } from './components/carousel';
-import PortfolioDescription from './components/PDescription/portfolioDesciption';
+import React, { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Lenis from '@studio-freight/lenis';
 
+// Dynamically import components with correct types
+const IntroGraduateCollectionPortfolio = dynamic(() => import('./GradualSpacing').then(mod => mod.IntroGraduateCollectionPortfolio), { ssr: false });
+const PortfolioDescription = dynamic(() => import('./components/PDescription/portfolioDesciption').then(mod => mod.default), { ssr: false });
+const Carousel = dynamic(() => import('./components/carousel').then(mod => mod.default), { ssr: false });
+
 export default function Home() {
+  // Initialize Lenis with useCallback to avoid re-creating the function on every render
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
-      duration: 1.2, // Adjust the duration for smooth scrolling
-      easing: (t) => t, // Use a linear easing function for smooth transitions
+      duration: 1.2,
+      easing: (t) => t,
     });
 
-    // Animation frame update
     const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
 
-    // Start animation frame loop
     const animationFrameId = requestAnimationFrame(raf);
 
-    // Clean up on component unmount
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
@@ -38,12 +33,10 @@ export default function Home() {
   return (
     <div>
       <IntroGraduateCollectionPortfolio />
-      <PortfolioDescription
-        text={
-          "This collection is inspired by human emotions and Kintsugi art theories, which I came up with and refined for my final collection during the final year of my studies for (BA) Hons, Fashion Design Degree at Falmouth University, UK."
-        }
-      />
-      <Carousel name='sajkdn'/>
+      <div className="carouselContainer">
+      <Carousel name='sajkdn' />
+      </div>
+      
     </div>
   );
 }

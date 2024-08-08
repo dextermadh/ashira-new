@@ -15,7 +15,7 @@ export function IntroGraduateCollectionGallery() {
   const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start start', 'end start']
+    offset: ['start start', 'end start'],
   });
 
   // Define the y transform with smoother transition values

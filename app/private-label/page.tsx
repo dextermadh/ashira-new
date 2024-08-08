@@ -1,9 +1,10 @@
 "use client";
+
 import React, { useEffect } from "react";
+import Lenis from 'lenis';
 import { GradualSpacingDemo3, IntroPrivateLabel } from "./GradulaSpacing";
 import "./brand.css";
 import VelocityScroll from "@/components/VelocityScroll";
-import Lenis from 'lenis';
 import { 
   Description, Description1, Description2, Description3, Description4, Description5, Description6, 
   Intro, Section, Section1 
@@ -24,11 +25,11 @@ const Page = () => {
     };
 
     // Start animation frame loop
-    requestAnimationFrame(raf);
+    const animationFrameId = requestAnimationFrame(raf);
 
     // Cleanup function to remove Lenis instance when component unmounts
     return () => {
-      // No specific cleanup needed for Lenis, but keeping the return for best practices
+      cancelAnimationFrame(animationFrameId);
       lenis.destroy();
     };
   }, []);

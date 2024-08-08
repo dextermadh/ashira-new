@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
-import { GradualSpacingDemo1, IntroProjects } from "./components/GradualSpacing";
+import { IntroProjects } from "./components/GradualSpacing";
 import '../projects/projects.css';
 import ProjectSection from "./components/projectSection";
 import Lenis from 'lenis';
 
-const Page = () => {
+// Page component for handling the introduction and project sections
+const Page: React.FC = () => {
   useEffect(() => {
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
@@ -24,13 +25,12 @@ const Page = () => {
 
     // Cleanup function to remove Lenis instance when component unmounts
     return () => {
-      // No specific cleanup needed for Lenis, but keeping the return for best practices
       lenis.destroy();
     };
   }, []);
 
   return (
-    <div className="">
+    <div className="page-container"> {/* Added className for styling */}
       <IntroProjects />
       <div className="projectMain">
         <ProjectSection />
