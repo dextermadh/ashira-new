@@ -89,11 +89,7 @@ const Carousel: FC<{ name: string }> = ({ name }) => {
 
 const HeaderComponent: FC = () => (
     <div className="header">
-        <PortfolioDescription
-            text={
-                "This collection is inspired by human emotions and Kintsugi art theories, which I came up with and refined for my final collection during the final year of my studies for (BA) Hons, Fashion Design Degree at Falmouth University, UK."
-            }
-        />
+
     </div>
 );
 

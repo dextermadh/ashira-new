@@ -1,37 +1,26 @@
+
 "use client";
 
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import '@/app/neuromagination/portfolio/page.css' // Create this CSS module for styling
 
-export function GradualSpacingDemo21() {
+const textVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const IntroGraduateCollectionGallery: React.FC = () => {
   return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] fontNPortfolio"
-      text="Neuromagination|Portfolio"
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+      transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
+      className="fontNPortfolio"
+    >
+      Nuromagination|Portfolio
+    </motion.div>
   );
-}
+};
 
-export function IntroNeuromaginationPortfolio() {
-  const container = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end start']
-  });
-
-  // Smooth transform for y position
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-
-  return (
-    <div className='h-screen overflow-hidden'>
-      <motion.div
-        style={{ y }}
-        className='relative h-full flex items-center justify-center'
-        transition={{ type: "tween", ease: "easeInOut", duration: 1.2 }} // Adjusted for smoother effect
-      >
-        <GradualSpacingDemo21 />
-      </motion.div>
-    </div>
-  );
-}
+export default IntroGraduateCollectionGallery;

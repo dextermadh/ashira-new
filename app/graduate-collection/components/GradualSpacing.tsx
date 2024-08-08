@@ -1,36 +1,26 @@
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef, memo } from 'react';
 
-// Define GradualSpacingDemo10 with a display name
-const GradualSpacingDemo10 = memo(function GradualSpacingDemo10() {
+"use client";
+
+import { motion } from 'framer-motion';
+import "@/app/graduate-collection/page.css" // Create this CSS module for styling
+
+const textVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const IntroGraduateCollection: React.FC = () => {
   return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] fontG transition-transform duration-500"
-      text="Graduate Collection"
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+      transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
+      className="fontG"
+    >
+      Graduate Collection
+    </motion.div>
   );
-});
+};
 
-export function IntroGraduateCollection() {
-  const container = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end start'],
-  });
-
-  // Smooth vertical transform with ease
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-
-  return (
-    <div className='h-screen overflow-hidden'>
-      <motion.div
-        style={{ y }}
-        className='relative h-full flex items-center justify-center'
-        transition={{ ease: "easeInOut", duration: 1 }} // Smooth transition
-      >
-        <GradualSpacingDemo10 />
-      </motion.div>
-    </div>
-  );
-}
+export default IntroGraduateCollection;

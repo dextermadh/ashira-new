@@ -1,42 +1,26 @@
+
 "use client";
 
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import '@/app/private-label/brand.css' // Create this CSS module for styling
 
-// Custom hook for scroll-based animations
-const useScrollAnimation = (ref: React.RefObject<HTMLDivElement>, from: string, to: string) => {
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start']
-  });
-  return useTransform(scrollYProgress, [0, 1], [from, to]);
+const textVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
 };
 
-// GradualSpacingDemo3 Component
-export function GradualSpacingDemo3() {
+const IntroPrivateLabel: React.FC = () => {
   return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] font3"
-      text="PRIVATE LABEL"
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+      transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
+      className="font3"
+    >
+      private label
+    </motion.div>
   );
-}
+};
 
-// IntroPrivateLabel Component
-export function IntroPrivateLabel() {
-  const container = useRef<HTMLDivElement | null>(null);
-  const y = useScrollAnimation(container, "0vh", "150vh");
-
-  return (
-    <div className='h-screen overflow-hidden'>
-      <motion.div
-        style={{ y }}
-        className='relative h-full flex items-center justify-center'
-        transition={{ type: "tween", ease: "easeInOut", duration: 1.5 }} // Adjusted for smoother effect
-      >
-        <GradualSpacingDemo3 />
-      </motion.div>
-    </div>
-  );
-}
+export default IntroPrivateLabel;

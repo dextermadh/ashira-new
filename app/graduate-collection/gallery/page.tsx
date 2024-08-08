@@ -34,7 +34,7 @@ import image26 from "../../../public/assets/FASHION_SHOOT_3/p (51).jpg";
 import image27 from "../../../public/assets/FASHION_SHOOT_3/p (49).jpg";
 import image28 from "../../../public/assets/FASHION_SHOOT_3/p (50).jpg";
 import image29 from "../../../public/assets/FASHION_SHOOT_3/p (56).jpg";
-import { IntroGraduateCollectionGallery } from './Gradualspacing';
+import IntroGraduateCollectionGallery  from './Gradualspacing';
 
 // Convert StaticImageData to string URL
 const getImageSrc = (image: StaticImageData) => image.src;
@@ -109,7 +109,10 @@ export default function Home() {
 
   return (
     <div className="page-container">
+      <div className="IntroContainer">
       <IntroGraduateCollectionGallery />
+      </div>
+      
       <main onMouseMove={mouseMove}>
         {projects.map(({ handle1, handle2 }, i) => (
           <Gallery

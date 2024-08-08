@@ -5,9 +5,15 @@
 }
 
 .font3 {
-    font-size: 250px;
-    letter-spacing: -0.02em; 
-    color: black;
+    font-size:250px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    letter-spacing: 0.8rem;
 }
 
 .BackgroundImg {
@@ -44,8 +50,8 @@
 @media (max-width: 480px) {
 
     .font3 {
-        font-size: 70px;
-        letter-spacing: -0.02em; 
+        font-size: 50px;
+        letter-spacing: 0.05em; 
         color: black;
     }
 

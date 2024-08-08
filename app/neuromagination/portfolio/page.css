@@ -1,22 +1,28 @@
 .fontNPortfolio {
-    font-size: 130px;
-    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-    color: #000;
+  font-size:100px;
+  letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  color: #000;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-weight: 600;
+  letter-spacing: 1rem;
   }
 
   @media (max-width: 1200px) { 
     .fontNPortfolio {
-        font-size: 30px;
-        letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-        color: #000;
+      font-size: 75px;
+      letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+      color: #000;
       }
   }
   
   @media (max-width: 480px) { 
     .fontNPortfolio {
-        font-size: 30px;
-        letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-        color: #000;
+      font-size: 35px;
+      letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+      color: #000;
       }
   }
 

@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
-import { IntroProjects } from "./components/GradualSpacing";
+import  IntroProjects  from "./components/GradualSpacing";
 import '../projects/projects.css';
 import ProjectSection from "./components/projectSection";
 import Lenis from 'lenis';
+import VelocityScroll from "@/components/VelocityScroll";
 
 // Page component for handling the introduction and project sections
 const Page: React.FC = () => {
@@ -35,6 +36,7 @@ const Page: React.FC = () => {
       <div className="projectMain">
         <ProjectSection />
       </div>
+      <VelocityScroll />
     </div>
   );
 };

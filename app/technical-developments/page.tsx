@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { GradualSpacingDemo4, IntroTechnicalDevelopments } from "./components/GradualSpacingDemo4";
+import IntroTechnicalDevelopments  from "./components/GradualSpacingDemo4";
 import "./page.css";
 import Carousel3  from "../technical-developments/components/carousel/caorusel";
 import Lenis from 'lenis';

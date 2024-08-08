@@ -5,9 +5,15 @@
 }
 
 .IntroAbout{
-    font-size: 350px;
-    letter-spacing: -0.02em; 
-    color: black;
+    font-size:450px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    letter-spacing: 1.3rem;
 }
 
 .BackgroundImgAbout {
@@ -48,8 +54,8 @@
 @media (max-width: 768px) {
 
     .IntroAbout {
-        font-size: 100px;
-        letter-spacing: -0.02em; 
+        font-size: 150px;
+        letter-spacing: 0.2rem; 
         color: black;
     }
 

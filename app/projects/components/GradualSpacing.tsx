@@ -1,50 +1,26 @@
+
 "use client";
 
-import React, { useRef, useMemo } from 'react';
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import '@/app/projects/projects.css' // Create this CSS module for styling
 
-// GradualSpacing component for the "PROJECTS" text
-const GradualSpacingDemo1: React.FC = React.memo(() => {
+const textVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const IntroProjects: React.FC = () => {
   return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] fontProject"
-      text="PROJECTS"
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+      transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
+      className="fontProject"
+    >
+      Projects
+    </motion.div>
   );
-});
+};
 
-// Set display name for GradualSpacingDemo1
-GradualSpacingDemo1.displayName = "GradualSpacingDemo1";
-
-// Main component for the intro section with scroll-based animation
-export function IntroProjects() {
-  const container = useRef<HTMLDivElement>(null);
-
-  // Framer Motion useScroll hook to track scroll progress
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end start']
-  });
-
-  // Transform scroll progress to vertical movement
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-
-  // Memoize style object to avoid re-creating on each render
-  const style = useMemo(() => ({ y }), [y]);
-
-  return (
-    <div className="h-screen overflow-hidden">
-      <motion.div
-        style={style}
-        className="relative h-full flex items-center justify-center"
-        transition={{ type: "spring", stiffness: 50, damping: 15 }} // Smooth spring animation
-      >
-        <GradualSpacingDemo1 />
-      </motion.div>
-    </div>
-  );
-}
-
-// Set display name for IntroProjects
-IntroProjects.displayName = "IntroProjects";
+export default IntroProjects;

@@ -81,7 +81,7 @@ const Carousel2: FC<{ name: string }> = ({ name }) => {
 
 const HeaderComponent: FC = () => (
   <div className="header">
-            <PortfolioDescription text={"This Conceptual Development was created and implemented during the second year of study, drawing inspiration from the inexhaustible human power to imagine."}/>
+           
 
   </div>
 );

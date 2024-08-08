@@ -18,9 +18,15 @@ body{
 
 
 .NeuroFont {
-  font-size: 220px;
-  letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  font-size:200px;
+ /* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: #000;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
 }
 
 
@@ -42,7 +48,8 @@ body{
 /* Mobile Styles */
 @media (max-width: 768px) {
   .NeuroFont {
-    font-size: 55px;
+    font-size: 45px;
+    letter-spacing: 0.05em;
   }
   .page-contentNeuro{
     display: flex;

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import './page.css';
 import Lenis from '@studio-freight/lenis';
 import Link from 'next/link';
-import { IntroNeuromagination } from './components/GradualSpacing';
+import  IntroNeuromagination  from './components/GradualSpacing';
 import Card from '@/components/Card/Card';
 
 export default function Home() {
@@ -35,13 +35,13 @@ export default function Home() {
         <div className="page-contentNeuro">
           <Link href="neuromagination/portfolio" passHref>
             <Card 
-              imageSrc='/assets/Neuromagination/8V8A6486.JPG' 
+              imageSrc='/assets/Neuromagination/8V8A6486.jpg' 
               text='Portfolio'
             />
           </Link>
           <Link href="neuromagination/gallery" passHref>
             <Card 
-              imageSrc='/assets/Neuromagination/8V8A6198.JPG' 
+              imageSrc='/assets/Neuromagination/8V8A6198.jpg' 
               text='Gallery'
             />
           </Link>

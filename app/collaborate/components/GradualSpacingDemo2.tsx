@@ -1,37 +1,26 @@
+
 "use client";
 
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import '@/app/collaborate/collaborate.css' // Create this CSS module for styling
 
-export function GradualSpacingDemo2() {
+const textVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const IntroCollaborate: React.FC = () => {
   return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-tight text-black dark:text-white md:text-7xl md:leading-[5rem] font2"
-      text="COLLABORATE"
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+      transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
+      className="fontC"
+    >
+      Collaborate
+    </motion.div>
   );
-}
+};
 
-export function IntroCollaborate() {
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end start']
-  });
-
-  // Simplified transform for smoother performance
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "100vh"]);
-
-  return (
-    <div className='h-screen overflow-hidden'>
-      <motion.div 
-        style={{ y }} 
-        className='relative h-full flex items-center justify-center'
-        transition={{ duration: 0.5 }} // Adjusted duration for performance
-      >
-        <GradualSpacingDemo2 />
-      </motion.div>
-    </div>
-  );
-}
+export default IntroCollaborate;

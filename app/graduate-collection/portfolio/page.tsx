@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import Lenis from '@studio-freight/lenis';
 
 // Dynamically import components with correct types
-const IntroGraduateCollectionPortfolio = dynamic(() => import('./GradualSpacing').then(mod => mod.IntroGraduateCollectionPortfolio), { ssr: false });
+const IntroGraduateCollectionPortfolio = dynamic(() => import('./GradualSpacing'))
 const PortfolioDescription = dynamic(() => import('./components/PDescription/portfolioDesciption').then(mod => mod.default), { ssr: false });
 const Carousel = dynamic(() => import('./components/carousel').then(mod => mod.default), { ssr: false });
 
@@ -33,6 +33,11 @@ export default function Home() {
   return (
     <div>
       <IntroGraduateCollectionPortfolio />
+      <PortfolioDescription
+            text={
+                "This collection is inspired by human emotions and Kintsugi art theories, which I came up with and refined for my final collection during the final year of my studies for (BA) Hons, Fashion Design Degree at Falmouth University, UK."
+            }
+        />
       <div className="carouselContainer">
       <Carousel name='sajkdn' />
       </div>

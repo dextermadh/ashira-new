@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Lenis from '@studio-freight/lenis';
 
 // Dynamically import components
-const IntroGraduateCollection = lazy(() => import('./components/GradualSpacing').then(module => ({ default: module.IntroGraduateCollection })));
+const IntroGraduateCollection = lazy(() => import('./components/GradualSpacing'))
 const Card = lazy(() => import('@/components/Card/Card'));
 
 export default function Home() {

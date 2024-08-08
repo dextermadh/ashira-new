@@ -1,37 +1,27 @@
+
+
 "use client";
 
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import '@/app/about/brand.css' // Create this CSS module for styling
 
-export function GradualSpacingDemo20() {
+const textVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const IntroAbout: React.FC = () => {
   return (
-    <GradualSpacing
-      className="font-display text-center text-5xl font-bold tracking-[-0.1em] text-black dark:text-white md:text-7xl md:leading-[5rem] IntroAbout transition-transform duration-500"
-      text="About me"
-    />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={textVariants}
+      transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
+      className="IntroAbout"
+    >
+     About
+    </motion.div>
   );
-}
+};
 
-export function IntroAbout() {
-  const container = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end start']
-  });
-
-  // Smooth vertical transform with ease
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-
-  return (
-    <div ref={container} className='h-screen overflow-hidden'>
-      <motion.div
-        style={{ y }}
-        className='relative h-full flex items-center justify-center'
-        transition={{ ease: "easeInOut", duration: 1 }} // Smooth transition
-      >
-        <GradualSpacingDemo20 />
-      </motion.div>
-    </div>
-  );
-}
+export default IntroAbout;

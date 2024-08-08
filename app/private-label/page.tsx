@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import Lenis from 'lenis';
-import { GradualSpacingDemo3, IntroPrivateLabel } from "./GradulaSpacing";
+import IntroPrivateLabel from "./GradulaSpacing";
 import "./brand.css";
 import VelocityScroll from "@/components/VelocityScroll";
 import { 

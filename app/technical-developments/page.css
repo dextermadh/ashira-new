@@ -5,14 +5,24 @@
 }
 
 .fontT {
-    font-size: 150px;
-    letter-spacing: -0.02em; 
-    color: black;
+    font-size:110px;
+    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: #000;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    letter-spacing: 1rem;
 }
 
 @media (max-width: 768px) {
     .fontT {
         font-size: 30px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
     }
 }
 

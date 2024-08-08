@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import "./brand.css";
 import Lenis from 'lenis';
 import { Description, Description1, Intro, Section, Section1 } from "./component/about";
-import { IntroAbout } from "./Components/GradualSpacing";
+import  IntroAbout  from "./Components/GradualSpacing";
 
 const Page: React.FC = () => {
     useEffect(() => {

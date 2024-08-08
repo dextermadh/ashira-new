@@ -36,9 +36,15 @@ body,
 }
 
 .fontPortfolio {
-  font-size: 120px;
-  letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  font-size:90px;
+/* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: #000;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
 }
 
 .page-content {
@@ -218,8 +224,8 @@ body,
       padding: 8px;
     }
     .fontPortfolio {
-      font-size: 25px;
-      letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+      font-size: 27px;
+      letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
     }
   }

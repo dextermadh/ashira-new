@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { GradualSpacingDemo2, IntroCollaborate } from "../collaborate/components/GradualSpacingDemo2";
+import IntroCollaborate from "../collaborate/components/GradualSpacingDemo2";
 import { CV } from "./CV";
 import Lenis from 'lenis';
 import "../collaborate/collaborate.css"; // Ensure CSS is as optimized as possible

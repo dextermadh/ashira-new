@@ -26,7 +26,7 @@ import image17 from "../../../public/assets/Neuromagination/8V8A6565.jpg";
 import image18 from "../../../public/assets/Neuromagination/8V8A6572.jpg";
 import image19 from "../../../public/assets/Neuromagination/8V8A6600.jpg";
 
-import {  IntroNeuromaginationGallery } from './Gradualspacing';
+import IntroNeuromaginationGallery from './Gradualspacing';
 
 const getImageSrc = (image: StaticImageData) => image.src;
 
