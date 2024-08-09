@@ -18,7 +18,7 @@ const IntroGraduateCollectionPortfolio: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
       className="fontPortfolio"
     >
-      GRraduate COllection|Portfolio
+      Graduate COllection|Portfolio
     </motion.div>
   );
 };
