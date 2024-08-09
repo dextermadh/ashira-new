@@ -9,7 +9,7 @@ const textVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-const IntroGraduateCollectionGallery: React.FC = () => {
+const IntroNeuromaginationPortfolio: React.FC = () => {
   return (
     <motion.div
       initial="hidden"
@@ -18,9 +18,9 @@ const IntroGraduateCollectionGallery: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
       className="fontNPortfolio"
     >
-      Nuromagination|Portfolio
+      Neuromagination|Portfolio
     </motion.div>
   );
 };
 
-export default IntroGraduateCollectionGallery;
+export default IntroNeuromaginationPortfolio;
