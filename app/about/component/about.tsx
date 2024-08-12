@@ -2,8 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Background from '../../../public/assets/8V8A6294.jpg';
 import Background3 from "../../../public/assets/1.jpg";
-import Background2 from "../../../public/assets/FASHION_SHOOT_3/p (58).png";
+import Background2 from "../../../public/assets/FASHION_SHOOT_3/p (58).jpg";
 import { useScroll, useTransform, motion } from 'framer-motion';
+import '@/app/about/component/about.css'
 
 export function Description() {
     return (
@@ -88,7 +89,7 @@ export function Section1() {
         >
             <div className='fixed top-[-10vh] left-0 h-[120vh] w-full'>
                 <motion.div style={{ y }} className='relative w-full h-full'>
-                    <Image src={Background2} fill alt="image" className='BackgroundImgAbout1' priority />
+                    <Image src={Background2} fill alt="image" className='background2' priority />
                 </motion.div>
             </div>
         </div>

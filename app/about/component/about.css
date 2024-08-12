@@ -1,0 +1,10 @@
+.background2 {
+    object-fit: contain;
+}
+
+@media (max-width: 768px) { 
+    .background2 {
+        object-position: 50% 150%;
+    }
+    
+}
