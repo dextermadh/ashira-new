@@ -26,7 +26,7 @@ export default function Footer() {
                     <div className={styles.imageContact}>
                         <span>
                             <div className={styles.imageContainer}>
-                                <Image 
+                                <Image className='image'
                                     fill={true}
                                     alt={"image"}
                                     src={image1}
