@@ -52,6 +52,7 @@
 body {
   font-family: "BebasNue";
   background: rgb(242, 237, 229);
+  
 
 }
 
@@ -111,6 +112,10 @@ a, p {
 
 .btn-scroll-top:hover {
   background-color: rgb(218, 198, 170);
+}
+
+.comb {
+  will-change: transform;
 }
 
 
