@@ -15,6 +15,7 @@
     height: 100vh;
     font-weight: 600;
     letter-spacing: 1.3rem;
+    will-change: transform, opacity;
 }
 
 .BackgroundImgAbout {

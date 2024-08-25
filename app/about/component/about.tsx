@@ -13,7 +13,7 @@ export function Description() {
                 I’m an Undergraduate Fashion Design Student 
                 with a strong team working attitude, passion for 
                 innovation and keen interest in exploring diverse 
-                career sectors within the fashion industry
+                career sectors within the fashion industry.
             </p>
         </div>
     );
@@ -24,7 +24,7 @@ export function Description1() {
         <div className='flex justify-center my-40'>
             <p className='text-[4.5vw] lowercase text-center DesText1'>
                 I am eager to leverage my acquired skills and 
-                undergo professional developments.
+                undergo professional development.
             </p>
         </div>
     );
@@ -45,10 +45,10 @@ export function Intro() {
                 <Image 
                     src={Background} 
                     fill 
-                    alt="image" 
+                    alt="Fashion Image" 
                     className='BackgroundImgAbout' 
-                    priority 
-                    sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" // Optimize for responsive image loading
+                    priority={false} 
+                    sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
                 />
             </motion.div>
         </div>
@@ -75,10 +75,10 @@ export function Section() {
                     <Image 
                         src={Background3} 
                         fill 
-                        alt="image" 
-                        style={{ objectFit: "cover" }} 
-                        priority 
-                        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" 
+                        alt="Background Image 3" 
+                        style={{ objectFit: "cover", willChange: 'transform' }} 
+                        priority={false}
+                        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
                     />
                 </motion.div>
             </div>
@@ -104,13 +104,13 @@ export function Section1() {
             <div className='fixed top-[-10vh] left-0 h-[120vh] w-full'>
                 <motion.div style={{ y, willChange: 'transform' }} className='relative w-full h-full'>
                     <Image 
-                        src={Background} 
+                        src={Background2} 
                         fill 
-                        alt="image" 
+                        alt="Background Image 2" 
                         className='BackgroundImgAbout' 
-                        style={{ objectFit: "cover" }} 
+                        style={{ objectFit: "cover", willChange: 'transform' }} 
                         priority={false} 
-                        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" 
+                        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
                     />
                 </motion.div>
             </div>

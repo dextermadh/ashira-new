@@ -12,22 +12,23 @@ const Page: React.FC = () => {
         const lenis = new Lenis({
             duration: 1.2, // Smooth scrolling duration
             easing: (t: number) => t, // Linear easing for smoother transitions
-            smoothWheel: true, // Smooth wheel scrolling for Safari 
+            smoothWheel: true, // Enable smooth wheel scrolling 
+            wheelMultiplier: 1.2, // Fine-tune wheel scroll sensitivity
+            touchMultiplier: 2, // Fine-tune touch scroll sensitivity
         });
 
-        // Animation frame update
+        // Start Lenis scroll handler
         const raf = (time: number) => {
             lenis.raf(time);
             requestAnimationFrame(raf);
         };
 
-        // Start animation frame loop
         const animationFrameId = requestAnimationFrame(raf);
 
-        // Clean up on component unmount
+        // Clean up Lenis instance and animation frame on unmount
         return () => {
-            lenis.destroy(); // Properly clean up Lenis instance
-            cancelAnimationFrame(animationFrameId); // Cancel the animation frame
+            lenis.destroy();
+            cancelAnimationFrame(animationFrameId);
         };
     }, []);
 
