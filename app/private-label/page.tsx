@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Lenis from 'lenis';
 import IntroPrivateLabel from "./GradulaSpacing";
 import "./brand.css";
 import VelocityScroll from "@/components/VelocityScroll";
@@ -11,28 +10,7 @@ import {
 } from "./component/private-label";
 
 const Page = () => {
-  useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2, // Duration for smooth scrolling
-      easing: (t) => t, // Easing function for smooth transitions
-    });
-
-    // Animation frame update function
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    // Start animation frame loop
-    const animationFrameId = requestAnimationFrame(raf);
-
-    // Cleanup function to remove Lenis instance when component unmounts
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      lenis.destroy();
-    };
-  }, []);
+  // Enable smooth scrolling using native CSS
 
   return (
     <div className="page-container">

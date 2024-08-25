@@ -2,29 +2,22 @@
 
 import { useEffect } from 'react';
 import './page.css';
-import Lenis from '@studio-freight/lenis';
 import Link from 'next/link';
-import  IntroNeuromagination  from './components/GradualSpacing';
+import IntroNeuromagination from './components/GradualSpacing';
 import Card from '@/components/Card/Card';
 
 export default function Home() {
-  // Initialize Lenis only once
+  // Enable smooth scrolling using native CSS
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => t,
-    });
+    if (typeof document !== "undefined") {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
 
-    // Use requestAnimationFrame for smooth scrolling
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    const animationFrameId = requestAnimationFrame(raf);
-
+    // Clean up on component unmount
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (typeof document !== "undefined") {
+        document.documentElement.style.scrollBehavior = '';
+      }
     };
   }, []);
 

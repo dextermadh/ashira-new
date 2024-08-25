@@ -18,22 +18,19 @@ const menuLinks = [
 const Menu: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const tl = useRef<gsap.core.Timeline | null>(null); // Update type to gsap.core.Timeline
+  const tl = useRef<gsap.core.Timeline>(gsap.timeline({ paused: true }));
 
   // Toggle the menu open/close state
   const toggleMenu = () => {
-    console.log("Menu toggled. Current state:", isMenuOpen);
     setIsMenuOpen((prevState) => !prevState);
   };
 
   useEffect(() => {
-    console.log("Setting up GSAP animations");
-
     // Set initial position for menu link items
     gsap.set(".menu-link-item-holder", { y: 75 });
 
     // Create GSAP timeline
-    tl.current = gsap.timeline({ paused: true })
+    tl.current
       .to(".menu-overlay", {
         duration: 1.25,
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
@@ -50,19 +47,16 @@ const Menu: React.FC = () => {
         }
       );
 
-    console.log("GSAP timeline created:", tl.current);
+    return () => {
+      tl.current.kill(); // Clean up GSAP animations
+    };
   }, []);
 
   useEffect(() => {
-    console.log("isMenuOpen state changed:", isMenuOpen);
-    if (tl.current) {
-      if (isMenuOpen) {
-        tl.current.play();
-        console.log("Playing timeline");
-      } else {
-        tl.current.reverse();
-        console.log("Reversing timeline");
-      }
+    if (isMenuOpen) {
+      tl.current.play();
+    } else {
+      tl.current.reverse();
     }
   }, [isMenuOpen]);
 

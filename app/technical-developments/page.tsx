@@ -1,41 +1,17 @@
 "use client";
 import React, { useEffect } from "react";
-import IntroTechnicalDevelopments  from "./components/GradualSpacingDemo4";
+import IntroTechnicalDevelopments from "./components/GradualSpacingDemo4";
 import "./page.css";
-import Carousel3  from "../technical-developments/components/carousel/caorusel";
-import Lenis from 'lenis';
+import Carousel3 from "../technical-developments/components/carousel/caorusel";
 
 const Page = () => {
-  useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2, // Duration for smooth scrolling
-      easing: (t) => t, // Easing function for smooth transitions
-    });
-
-    // Animation frame update function
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    // Start animation frame loop
-    requestAnimationFrame(raf);
-
-    // Cleanup function to remove Lenis instance when component unmounts
-    return () => {
-      // No specific cleanup needed for Lenis, but keeping the return for best practices
-      lenis.destroy();
-    };
-  }, []);
 
   return (
     <div className="">
       <IntroTechnicalDevelopments />
       <div className="carouselContainer">
-      <Carousel3 name="technical-developments" />
+        <Carousel3 name="technical-developments" />
       </div>
-      
     </div>
   );
 };

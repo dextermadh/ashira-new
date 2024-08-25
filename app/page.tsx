@@ -6,7 +6,6 @@ import Hero from "@/components/Hero/Hero";
 import PreLoader from "@/components/preloader/preloader";
 import { AnimatePresence } from 'framer-motion';
 import Description from '../components/Description/description';
-import Lenis from '@studio-freight/lenis';
 import { useScroll } from 'framer-motion';
 import ProjectSection from "./projects/components/projectSection";
 
@@ -18,10 +17,7 @@ const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const container = useRef<HTMLDivElement>(null);
 
-  useScroll({
-    target: container,
-    offset: ['start start', 'end end']
-  });
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -33,23 +29,7 @@ const App: React.FC = () => {
     return () => clearTimeout(timer); // Cleanup timeout on unmount
   }, []);
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2, // Optional: set duration for smoother scroll
-      easing: (t) => t, // Optional: set easing function
-    });
 
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy(); // Ensure Lenis is cleaned up
-    };
-  }, []);
 
   return (
     <div ref={container}>
