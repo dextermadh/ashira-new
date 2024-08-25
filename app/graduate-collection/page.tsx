@@ -2,32 +2,23 @@
 import { useEffect, Suspense, lazy } from 'react';
 import './page.css';
 import Link from 'next/link';
-import Lenis from '@studio-freight/lenis';
 
 // Dynamically import components
-const IntroGraduateCollection = lazy(() => import('./components/GradualSpacing'))
+const IntroGraduateCollection = lazy(() => import('./components/GradualSpacing'));
 const Card = lazy(() => import('@/components/Card/Card'));
 
 export default function Home() {
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2, // Adjust the duration for smooth scrolling
-      easing: (t) => t, // Use a linear easing function for smooth transitions
-    });
-
-    // Animation frame update
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    // Start animation frame loop
-    const animationFrameId = requestAnimationFrame(raf);
+    // Enable smooth scrolling using native CSS
+    if (typeof document !== "undefined") {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
 
     // Clean up on component unmount
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (typeof document !== "undefined") {
+        document.documentElement.style.scrollBehavior = '';
+      }
     };
   }, []);
 

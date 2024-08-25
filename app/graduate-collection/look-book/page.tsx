@@ -1,36 +1,20 @@
 'use client';
 import { useEffect } from 'react';
-import Lenis from '@studio-freight/lenis';
 import './page.css';
 
 export default function Home() {
   useEffect(() => {
-    // Check if the environment supports requestAnimationFrame for safety
-    if (typeof window !== "undefined") {
-      // Initialize Lenis for smooth scrolling
-      const lenis = new Lenis({
-        duration: 1.2, // Duration of smooth scrolling
-        easing: (t: number) => t, // Linear easing function for smooth transitions
-      });
-
-      // Animation frame update with throttling (e.g., every 16ms ~ 60fps)
-      let lastTime = 0;
-      const raf = (time: number) => {
-        if (time - lastTime > 16) {
-          lenis.raf(time);
-          lastTime = time;
-        }
-        requestAnimationFrame(raf);
-      };
-
-      // Start animation frame loop
-      const animationFrameId = requestAnimationFrame(raf);
-
-      // Clean up on component unmount
-      return () => {
-        cancelAnimationFrame(animationFrameId);
-      };
+    // Enable smooth scrolling using native CSS
+    if (typeof document !== "undefined") {
+      document.documentElement.style.scrollBehavior = 'smooth';
     }
+
+    // Clean up on component unmount
+    return () => {
+      if (typeof document !== "undefined") {
+        document.documentElement.style.scrollBehavior = '';
+      }
+    };
   }, []);
 
   return (

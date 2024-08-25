@@ -41,7 +41,7 @@ export function Intro() {
 
     return (
         <div ref={container} className='h-screen overflow-hidden'>
-            <motion.div style={{ y, willChange: 'transform' }} className='relative h-full'>
+            <motion.div style={{ y}} className='relative h-full'>
                 <Image 
                     src={Background} 
                     fill 
