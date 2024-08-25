@@ -1,7 +1,6 @@
-"use client"
+'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import Lenis from '@studio-freight/lenis';
 import Image, { StaticImageData } from 'next/image';
 import Gallery from './gallery';
 import "../../graduate-collection/page.css";
@@ -51,27 +50,19 @@ const projects = [
 ];
 
 export default function Home() {
-  // Use callback to avoid unnecessary re-creations
-  const initializeLenis = useCallback(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => t,
-    });
-
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    const animationFrameId = requestAnimationFrame(raf);
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
-
   useEffect(() => {
-    const cleanup = initializeLenis();
-    return cleanup;
-  }, [initializeLenis]);
+    // Enable smooth scrolling using native CSS
+    if (typeof document !== "undefined") {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
+
+    // Clean up on component unmount
+    return () => {
+      if (typeof document !== "undefined") {
+        document.documentElement.style.scrollBehavior = '';
+      }
+    };
+  }, []);
 
   // Throttle mouseMove to improve performance
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

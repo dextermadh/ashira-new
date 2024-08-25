@@ -11,7 +11,13 @@ const smoothScrollStyle = `
     scroll-behavior: smooth;
   }
 `;
+import { createGlobalStyle } from 'styled-components';
 
+const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+`;
 const Page: React.FC = () => {
     useEffect(() => {
         // Set smooth scroll style dynamically if needed
@@ -26,7 +32,9 @@ const Page: React.FC = () => {
     }, []);
 
     return (
-        <div className="page-container">
+        <>
+         <GlobalStyle />  
+              <div className="page-container">
             <IntroAbout />
             <div className="content">
                 <Intro />
@@ -36,6 +44,8 @@ const Page: React.FC = () => {
                 <Section1 />
             </div> 
         </div>
+        </>
+
     );
 };
 
