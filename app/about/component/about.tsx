@@ -4,7 +4,7 @@ import Background from '../../../public/assets/8V8A6294.jpg';
 import Background3 from "../../../public/assets/1.jpg";
 import Background2 from "../../../public/assets/FASHION_SHOOT_3/p (58).jpg";
 import { useScroll, useTransform, motion } from 'framer-motion';
-import '@/app/about/component/about.css'
+import '@/app/about/component/about.css';
 
 export function Description() {
     return (
@@ -40,9 +40,16 @@ export function Intro() {
     const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
     return (
-        <div className='h-screen overflow-hidden'>
-            <motion.div style={{ y }} className='relative h-full'>
-                <Image src={Background} fill alt="image" className='BackgroundImgAbout' priority />
+        <div ref={container} className='h-screen overflow-hidden'>
+            <motion.div style={{ y, willChange: 'transform' }} className='relative h-full'>
+                <Image 
+                    src={Background} 
+                    fill 
+                    alt="image" 
+                    className='BackgroundImgAbout' 
+                    priority 
+                    sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" // Optimize for responsive image loading
+                />
             </motion.div>
         </div>
     );
@@ -64,8 +71,15 @@ export function Section() {
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
             <div className='fixed top-[-10vh] left-0 h-[120vh] w-full'>
-                <motion.div style={{ y }} className='relative w-full h-full'>
-                    <Image src={Background3} fill alt="image" style={{ objectFit: "cover" }} priority />
+                <motion.div style={{ y, willChange: 'transform' }} className='relative w-full h-full'>
+                    <Image 
+                        src={Background3} 
+                        fill 
+                        alt="image" 
+                        style={{ objectFit: "cover" }} 
+                        priority 
+                        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" 
+                    />
                 </motion.div>
             </div>
         </div>
@@ -88,8 +102,16 @@ export function Section1() {
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
         >
             <div className='fixed top-[-10vh] left-0 h-[120vh] w-full'>
-                <motion.div style={{ y }} className='relative w-full h-full'>
-                    <Image src={Background2} fill alt="image" className='background2' priority />
+                <motion.div style={{ y, willChange: 'transform' }} className='relative w-full h-full'>
+                    <Image 
+                        src={Background} 
+                        fill 
+                        alt="image" 
+                        className='BackgroundImgAbout' 
+                        style={{ objectFit: "cover" }} 
+                        priority={false} 
+                        sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw" 
+                    />
                 </motion.div>
             </div>
         </div>

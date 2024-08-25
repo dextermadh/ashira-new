@@ -80,7 +80,7 @@ const Phrase = ({ src }: PhraseProps) => {
 const TextImagePair = ({ src }: PhraseProps) => {
   return (
     <>
-      <p className='text-[7.5vw] text'>EESAMO</p>
+      <p className='text-[7.5vw] text'>FASHION DESIGNER</p>
       <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden image">
         <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
       </span>

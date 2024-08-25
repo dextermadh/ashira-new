@@ -4,14 +4,15 @@ import React, { useEffect } from "react";
 import "./brand.css";
 import Lenis from 'lenis';
 import { Description, Description1, Intro, Section, Section1 } from "./component/about";
-import  IntroAbout  from "./Components/GradualSpacing";
+import IntroAbout from "./Components/GradualSpacing";
 
 const Page: React.FC = () => {
     useEffect(() => {
-        // Initialize Lenis
+        // Initialize Lenis with optimized settings for Safari
         const lenis = new Lenis({
-            duration: 1.2, // Adjust the duration for smooth scrolling
-            easing: (t: number) => t // Use a linear easing function for smoother transitions
+            duration: 1.2, // Smooth scrolling duration
+            easing: (t: number) => t, // Linear easing for smoother transitions
+            smoothWheel: true, // Smooth wheel scrolling for Safari 
         });
 
         // Animation frame update
@@ -25,12 +26,13 @@ const Page: React.FC = () => {
 
         // Clean up on component unmount
         return () => {
-            cancelAnimationFrame(animationFrameId);
+            lenis.destroy(); // Properly clean up Lenis instance
+            cancelAnimationFrame(animationFrameId); // Cancel the animation frame
         };
     }, []);
 
     return (
-        <div className="page-container"> {/* Added a class for additional styling if needed */}
+        <div className="page-container">
             <IntroAbout />
             <div className="content">
                 <Intro />
