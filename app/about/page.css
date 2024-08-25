@@ -23,44 +23,5 @@
 /* Webkit-specific optimizations for Safari */
 
 /* Enable smooth scrolling on iOS Safari */
-html, body {
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS Safari */
-}
 
-/* Force hardware acceleration on transformed elements */
-.page-container, .content, .Intro, .Section, .Section1 {
-    -webkit-transform: translate3d(0, 0, 0); /* Trigger GPU acceleration */
-    -webkit-backface-visibility: hidden; /* Prevent flickering during transitions */
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-}
 
-/* Apply smooth transitions for transforms */
-motion.div {
-    -webkit-transition: -webkit-transform 0.5s ease-in-out; /* Smooth transition for transforms */
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Optimize image rendering */
-.BackgroundImgAbout, .background2 {
-    -webkit-transform: translateZ(0); /* Force GPU rendering for smoother image transitions */
-    image-rendering: -webkit-optimize-contrast; /* Enhance image rendering on Safari */
-    image-rendering: optimize-contrast;
-}
-
-/* Optimize smooth scrolling on mobile Safari */
-.page-container {
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling behavior */
-}
-
-/* Prevent Safari-specific scrolling glitches */
-.scroll-container {
-    -webkit-scroll-snap-type: y mandatory; /* Scroll snapping for Safari */
-    scroll-snap-type: y mandatory;
-}
-
-/* Ensure smoother animations and transitions */
-.intro, .section {
-    -webkit-transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
