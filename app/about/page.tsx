@@ -32,7 +32,7 @@ const Page: React.FC = () => {
     }, []);
 
     return (
-        <div className="page-container">
+        <div className="page-container" tabIndex={-1}>
             <IntroAbout />
             <div className="content">
                 <Intro />
