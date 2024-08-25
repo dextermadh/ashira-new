@@ -8,15 +8,6 @@ import IntroAbout from "./Components/GradualSpacing";
 
 const Page: React.FC = () => {
 
-
-    useEffect(() => {
-        // Force repaint
-        document.body.style.display = 'none';
-        document.body.offsetHeight; // Trigger a reflow
-        document.body.style.display = '';
-    }, []);
-    
-
     return (
         <div className="page-container">
             <IntroAbout />

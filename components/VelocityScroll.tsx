@@ -2,7 +2,6 @@
 
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Picture1 from "../public/assets/PNG- RGB DIigtal and Print.png";
-import Lenis from 'lenis';
 import './velocityscroll.css';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useRef } from 'react';
@@ -14,18 +13,7 @@ export default function VelocityScroll() {
     offset: ['start end', 'end start']
   });
 
-  useEffect(() => {
-    const lenis = new Lenis();
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => lenis.destroy(); // Clean up Lenis on unmount
-  }, []);
 
   return (
     <main className="overflow-hidden">
