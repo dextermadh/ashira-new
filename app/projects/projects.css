@@ -107,10 +107,10 @@
 }
 
 /* Adjustments for mobile screens */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 480px) {
 
     .fontProject {
-        font-size: 60px;
+        font-size: 80px;
         letter-spacing: 0.1em; /* Smaller font-size for mobile screens */
       }
     
@@ -147,10 +147,10 @@
     }
   }
 
-  @media (max-width: 1400px) {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
 
     .fontProject {
-        font-size: 200px;
+        font-size: 180px;
         letter-spacing: 0.1em; /* Smaller font-size for mobile screens */
       }
     }

@@ -16,7 +16,7 @@ const IntroPrivateLabel: React.FC = () => {
       animate="visible"
       variants={textVariants}
       transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
-      className="font3"
+      className="fontPL"
     >
       private label
     </motion.div>

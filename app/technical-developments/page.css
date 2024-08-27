@@ -18,7 +18,7 @@
 
 @media (max-width: 768px) {
     .fontT {
-        font-size: 30px;
+        font-size: 40px;
         justify-content: center;
         display: flex;
         align-items: center;
@@ -26,7 +26,7 @@
     }
 }
 
-@media (max-width: 1400px) { 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
     .fontT {
         font-size: 90px;
         justify-content: center;

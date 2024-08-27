@@ -8,7 +8,7 @@
     background-color: white;
 }
 
-.font3 {
+.fontPL {
     font-size:250px;
     letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: #000;
@@ -62,8 +62,8 @@
 /* General Mobile Styles */
 @media (max-width: 480px) {
 
-    .font3 {
-        font-size: 50px;
+    .fontPL {
+        font-size: 60px;
         letter-spacing: 0.05em; 
         color: black;
     }
@@ -95,8 +95,10 @@
     }
 }
 
-@media (max-width: 1400px) { 
-    .font3{
-        font-size: 120px;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+    .fontPL {
+        font-size: 180px;
+        letter-spacing: 0.05em; 
+        color: black;
     }
 }

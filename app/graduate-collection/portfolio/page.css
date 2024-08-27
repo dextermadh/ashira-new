@@ -230,6 +230,14 @@ body,
     }
   }
 
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) { 
+    .fontPortfolio {
+      font-size: 70px;
+      letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+      color: #000;
+    }
+  }
+
   .carouselContainer {
     overflow: hidden;
   }

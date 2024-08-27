@@ -92,3 +92,16 @@
         text-align: center; /* Center-align the content */
     }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) { 
+    .description{
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 0;
+    }    
+
+    .description .body p {
+        font-size: 30px; /* Smaller font size for headings */
+        
+    }
+}
