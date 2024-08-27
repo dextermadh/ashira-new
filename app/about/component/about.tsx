@@ -104,7 +104,7 @@ export function Section1() {
             <div className='fixed top-[-10vh] left-0 h-[120vh] w-full'>
                 <motion.div style={{ y, willChange: 'transform' }} className='relative w-full h-full'>
                     <Image 
-                        src={Background2} 
+                        src={Background} 
                         fill 
                         alt="Background Image 2" 
                         className='BackgroundImgAbout' 

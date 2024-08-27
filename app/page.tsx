@@ -8,6 +8,9 @@ import { AnimatePresence } from 'framer-motion';
 import Description from '../components/Description/description';
 import { useScroll } from 'framer-motion';
 import ProjectSection from "./projects/components/projectSection";
+import IntroTechnicalDevelopments from "./technical-developments/components/GradualSpacingDemo4";
+import Carousel3 from "./technical-developments/components/carousel/caorusel";
+import '@/app/technical-developments/page.css'
 
 // Optimize HeroSection and ProjectSection if they are large
 const MemoizedHeroSection = React.memo(HeroSection);
@@ -43,6 +46,10 @@ const App: React.FC = () => {
       </div>
       <MemoizedProjectSection />
       <VelocityScroll />
+      
+      <div className="carouselContainer">
+        <Carousel3 name="technical-developments" />
+      </div>
     </div>
   );
 };

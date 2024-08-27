@@ -1,7 +1,7 @@
 'use client';
 
 import { useScroll, useTransform, motion } from 'framer-motion';
-import Picture1 from "../public/assets/PNG- RGB DIigtal and Print.png";
+import Picture1 from "../public/assets/Brand.png";
 import './velocityscroll.css';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useRef } from 'react';
@@ -68,10 +68,7 @@ const Phrase = ({ src }: PhraseProps) => {
 const TextImagePair = ({ src }: PhraseProps) => {
   return (
     <>
-      <p className='text-[7.5vw] text'>FASHION DESIGNER</p>
-      <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden image">
-        <Image style={{ objectFit: "cover" }} src={src} alt="image" fill />
-      </span>
+      <p className='text-[7.5vw] text'>- FASHION DESIGNER</p>
     </>
   );
 }

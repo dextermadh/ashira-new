@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.bg-white {
+    background-color: white;
+}
+
 .font3 {
     font-size:250px;
     letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
@@ -14,6 +18,11 @@
     height: 100vh;
     font-weight: 600;
     letter-spacing: 0.8rem;
+}
+
+.p {
+    font-family: MonteLight;
+    text-transform: none;
 }
 
 .BackgroundImg {
@@ -44,6 +53,10 @@
     font-family: "MonteLight";
     text-transform: capitalize;
     margin: 20px;
+}
+
+.pLabel {
+    background-color: white;
 }
 
 /* General Mobile Styles */

@@ -6,7 +6,7 @@
 
 
 .fontC {
-  font-size:220px;/* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  font-size:280px;/* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: #000;
   justify-content: center;
   display: flex;
@@ -19,9 +19,9 @@
 
 
 
-@media (max-width: 767px) { 
+@media (max-width:1407px) { 
     .fontC {
-      font-size: 60px;
+      font-size: 180px;
       letter-spacing: 0.5rem;
     }
 
@@ -42,10 +42,10 @@
     }
   }
   
-  @media (max-width: 480px) { 
+  @media (max-width: 767px) { 
 
     .fontC {
-      font-size: 70px;
+      font-size: 90px;
       letter-spacing: 0.1rem;
     }
     
