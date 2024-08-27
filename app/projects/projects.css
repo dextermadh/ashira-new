@@ -146,3 +146,11 @@
       font-size: 16px; /* Smaller font-size for mobile */
     }
   }
+
+  @media (max-width: 1400px) {
+
+    .fontProject {
+        font-size: 200px;
+        letter-spacing: 0.1em; /* Smaller font-size for mobile screens */
+      }
+    }

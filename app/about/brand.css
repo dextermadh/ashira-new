@@ -84,4 +84,11 @@
     }
 }
 
+@media (max-width:1400px) {
 
+    .IntroAbout {
+        font-size: 310px;
+        letter-spacing: 0.2rem; 
+        color: black;
+    }
+}    

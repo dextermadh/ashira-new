@@ -26,6 +26,16 @@
     }
 }
 
+@media (max-width: 1400px) { 
+    .fontT {
+        font-size: 90px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+    }
+}
+
 
 .carouselContainer {
     overflow: hidden;

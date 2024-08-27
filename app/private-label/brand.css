@@ -95,3 +95,8 @@
     }
 }
 
+@media (max-width: 1400px) { 
+    .font3{
+        font-size: 120px;
+    }
+}

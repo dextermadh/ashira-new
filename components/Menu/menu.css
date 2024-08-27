@@ -84,11 +84,15 @@
     color: #000;
     font-size: 20px;
 }
+.menu-preview p {
+    font-size: 20px;
+}
 
 .menu-close-icon p {
     font-size: 80px; /* Adjusted font size *//* Adjusted text stroke */
-    line-height: 1.2; /* Adjusted line-height for more space */
+    line-height: 0.6; /* Adjusted line-height for more space */
     color: #000;
+    
 }
 
 .menu-link {
@@ -158,3 +162,16 @@
         display: none;
     }
 }
+
+@media (max-width:1400px) {
+    .menu-copy {
+        padding-top: 15em;
+    }
+    .menu-close-icon p {
+        margin-right: 20px;
+    }
+
+    .menu-close-icon {
+        display: none;
+    }
+ }
