@@ -235,6 +235,7 @@ body,
       font-size: 70px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
+      text-align: center;
     }
   }
 

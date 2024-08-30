@@ -18,7 +18,7 @@
 
 @media (max-width: 768px) {
     .fontT {
-        font-size: 40px;
+        font-size: 35px;
         justify-content: center;
         display: flex;
         align-items: center;
@@ -30,6 +30,7 @@
     .fontT {
         font-size: 90px;
         justify-content: center;
+        text-align: center;
         display: flex;
         align-items: center;
         letter-spacing: 0.05em;

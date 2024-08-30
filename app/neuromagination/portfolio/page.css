@@ -12,7 +12,7 @@
 
   @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) { 
     .fontNPortfolio {
-      font-size: 70px;
+      font-size: 65px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
       }
@@ -20,7 +20,7 @@
   
   @media (max-width: 480px) { 
     .fontNPortfolio {
-      font-size: 35px;
+      font-size: 30px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
       }
