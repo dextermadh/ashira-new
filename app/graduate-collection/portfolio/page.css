@@ -224,18 +224,23 @@ body,
       padding: 8px;
     }
     .fontPortfolio {
-      font-size: 27px;
+      font-size: 40px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
+      margin: 0 30px;
+      text-align: center;
+      overflow: hidden;
     }
   }
 
   @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) { 
     .fontPortfolio {
-      font-size: 70px;
+      font-size: 75px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
+      margin: 0 40px;
       text-align: center;
+      overflow: hidden;
     }
   }
 

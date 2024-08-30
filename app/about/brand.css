@@ -16,6 +16,9 @@
     font-weight: 600;
     letter-spacing: 1.3rem;
     will-change: transform, opacity;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
 }
 
 .BackgroundImgAbout {
@@ -56,9 +59,12 @@
 @media (max-width: 768px) {
 
     .IntroAbout {
-        font-size: 150px;
+        font-size: 130px;
         letter-spacing: 0.2rem; 
         color: black;
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden;
     }
 
     .content {
@@ -90,5 +96,8 @@
         font-size: 310px;
         letter-spacing: 0.2rem; 
         color: black;
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden;
     }
 }    

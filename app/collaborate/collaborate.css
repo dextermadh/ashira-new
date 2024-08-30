@@ -14,6 +14,9 @@
   height: 100vh;
   font-weight: 600;
   letter-spacing: 1rem;
+  margin: 0 30px;
+  text-align: center;
+  overflow: hidden;
 }
 
 
@@ -21,8 +24,11 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
     .fontC {
-      font-size: 150px;
+      font-size: 145px;
       letter-spacing: 0.5rem;
+      margin: 0 40px;
+      text-align: center;
+      overflow: hidden;
     }
 
 
@@ -33,6 +39,9 @@
     .fontC {
       font-size: 75px;
       letter-spacing: 0.1rem;
+      margin: 0 30px;
+      text-align: center;
+      overflow: hidden;
     }
     .BcardContainer {
       width: 90vw;

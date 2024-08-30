@@ -27,6 +27,9 @@ body{
   height: 100vh;
   font-weight: 600;
   letter-spacing: 0.9rem;
+  margin: 0 30px;
+  text-align: center;
+  overflow: hidden;
 }
 
 
@@ -50,6 +53,9 @@ body{
   .NeuroFont {
     font-size: 45px;
     letter-spacing: 0.05em;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
   }
   .page-contentNeuro{
     display: flex;
@@ -63,5 +69,8 @@ body{
   .NeuroFont {
     font-size: 110px;
     letter-spacing: 0.05em;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
   }
 }

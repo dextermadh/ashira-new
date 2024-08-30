@@ -18,7 +18,7 @@ const IntroNeuromaginationGallery: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
       className="NeuroG"
     >
-      Neuromagination|Gallery
+      Neuromagination | Gallery
     </motion.div>
   );
 };

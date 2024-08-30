@@ -13,6 +13,9 @@
     height: 100vh;
     font-weight: 600;
     letter-spacing: 1rem;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
 }
 
 
@@ -111,7 +114,10 @@
 
     .fontProject {
         font-size: 80px;
-        letter-spacing: 0.1em; /* Smaller font-size for mobile screens */
+        letter-spacing: 0.1em;
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden; /* Smaller font-size for mobile screens */
       }
     
 
@@ -152,5 +158,9 @@
     .fontProject {
         font-size: 180px;
         letter-spacing: 0.1em; /* Smaller font-size for mobile screens */
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden;
       }
+     
     }

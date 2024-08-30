@@ -5,7 +5,7 @@
 }
 
 .fontT {
-    font-size:110px;
+    font-size:140px;
     letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: #000;
     justify-content: center;
@@ -13,16 +13,22 @@
     align-items: center;
     height: 100vh;
     font-weight: 600;
-    letter-spacing: 1rem;
+    letter-spacing: 0.05em;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
     .fontT {
-        font-size: 35px;
+        font-size:55px;
         justify-content: center;
         display: flex;
         align-items: center;
         letter-spacing: 0.05em;
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden;
     }
 }
 

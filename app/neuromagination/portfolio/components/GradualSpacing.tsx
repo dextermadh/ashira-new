@@ -18,7 +18,7 @@ const IntroNeuromaginationPortfolio: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
       className="fontNPortfolio"
     >
-      Neuromagination|Portfolio
+      Neuromagination | Portfolio
     </motion.div>
   );
 };

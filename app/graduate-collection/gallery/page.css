@@ -8,12 +8,18 @@
     height: 100vh;
     font-weight: 600;
     letter-spacing: 0.5rem;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
   }
 
   @media (max-width: 768px) { 
     .font2 {
-      font-size: 33px;
+      font-size: 50px;
       letter-spacing: 0.001rem;
+      margin: 0 30px;
+      text-align: center;
+      overflow: hidden;
     }
   }
 
@@ -21,6 +27,9 @@
     .font2 {
       font-size: 70px;
       letter-spacing: 0.001rem;
+      margin: 0 30px;
+      text-align: center;
+      overflow: hidden;
     }
   }
   
