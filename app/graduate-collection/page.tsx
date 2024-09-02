@@ -2,10 +2,9 @@
 import { useEffect, Suspense, lazy } from 'react';
 import './page.css';
 import Link from 'next/link';
+import IntroGraduateCollection from './components/GradualSpacing';
+import Card from '@/components/Card/Card';
 
-// Dynamically import components
-const IntroGraduateCollection = lazy(() => import('./components/GradualSpacing'));
-const Card = lazy(() => import('@/components/Card/Card'));
 
 export default function Home() {
   useEffect(() => {
@@ -24,7 +23,6 @@ export default function Home() {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
         <IntroGraduateCollection />
         <div className="containerGG">
           <div className="page-contentGG">
@@ -39,7 +37,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </Suspense>
     </div>
   );
 }
