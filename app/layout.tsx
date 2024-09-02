@@ -5,6 +5,7 @@ import Menu from "@/components/Menu/Menu";
 import Head from "next/head";
 import Footer from "@/components/Footer/Footer";
 import {ScrollToTopButton} from "../components/scrolltotop"
+import { Analytics } from '@vercel/analytics/react';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollToTopButton />
+        <Analytics />
         </body>
     </html>
   );
