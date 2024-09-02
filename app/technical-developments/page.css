@@ -6,14 +6,13 @@
 
 .fontT {
     font-size:140px;
-    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: #000;
     justify-content: center;
     display: flex;
     align-items: center;
     height: 100vh;
     font-weight: 600;
-    letter-spacing: 0.05em;
     margin: 0 30px;
     text-align: center;
     overflow: hidden;

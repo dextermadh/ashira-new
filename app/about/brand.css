@@ -6,8 +6,8 @@
 
 
 .IntroAbout{
-    font-size:450px;
-    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    font-size:280px;
+    letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: #000;
     justify-content: center;
     display: flex;
@@ -59,8 +59,8 @@
 @media (max-width: 768px) {
 
     .IntroAbout {
-        font-size: 130px;
-        letter-spacing: 0.2rem; 
+        font-size: 60px;
+        letter-spacing: 0.05em;
         color: black;
         margin: 0 30px;
         text-align: center;
@@ -93,8 +93,8 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
 
     .IntroAbout {
-        font-size: 310px;
-        letter-spacing: 0.2rem; 
+        font-size: 125px;
+        letter-spacing: 0.05em;
         color: black;
         margin: 0 30px;
         text-align: center;

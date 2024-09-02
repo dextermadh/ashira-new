@@ -18,7 +18,7 @@ const IntroAbout: React.FC = () => {
       className="IntroAbout"
       style={{ willChange: 'transform, opacity' }} // Inform browser of impending changes
     >
-      About
+      About ME
     </motion.div>
   );
 };

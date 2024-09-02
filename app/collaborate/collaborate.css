@@ -13,7 +13,7 @@
   align-items: center;
   height: 100vh;
   font-weight: 600;
-  letter-spacing: 1rem;
+  letter-spacing: 0.05em;
   margin: 0 30px;
   text-align: center;
   overflow: hidden;
@@ -24,8 +24,8 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
     .fontC {
-      font-size: 145px;
-      letter-spacing: 0.5rem;
+      font-size: 125px;
+      letter-spacing: 0.05em;
       margin: 0 40px;
       text-align: center;
       overflow: hidden;
@@ -37,8 +37,8 @@
   @media (max-width: 767px) { 
 
     .fontC {
-      font-size: 75px;
-      letter-spacing: 0.1rem;
+      font-size: 60px;
+      letter-spacing: 0.05em;
       margin: 0 30px;
       text-align: center;
       overflow: hidden;

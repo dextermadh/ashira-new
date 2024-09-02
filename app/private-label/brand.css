@@ -10,7 +10,7 @@
 
 .fontPL {
     font-size:250px;
-    letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: #000;
     justify-content: center;
     display: flex;

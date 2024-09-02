@@ -2,8 +2,9 @@
 import React, { useEffect } from "react";
 import IntroProjects from "./components/GradualSpacing";
 import '../projects/projects.css';
-import ProjectSection from "./components/projectSection";
+
 import VelocityScroll from "@/components/VelocityScroll";
+import { ProjectSection } from "./components/projectSection";
 
 // Page component for handling the introduction and project sections
 const Page: React.FC = () => {
