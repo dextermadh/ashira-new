@@ -36,15 +36,17 @@ body,
 }
 
 .fontPortfolio {
-  font-size:90px;
+  font-size:110px;
 /* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: #000;
+  text-align: center;
   justify-content: center;
   display: flex;
+  margin: 0 30px;
   align-items: center;
   height: 100vh;
   font-weight: 600;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.05rem;
 }
 
 .page-content {
@@ -227,7 +229,7 @@ body,
       font-size: 40px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
-      margin: 0 30px;
+      margin: 0 40px;
       text-align: center;
       overflow: hidden;
     }

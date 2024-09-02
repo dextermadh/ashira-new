@@ -1,13 +1,12 @@
 .fontNPortfolio {
-  font-size:120px;
-  letter-spacing: -0.02em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+  font-size:110px;
+  letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: #000;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 100vh;
   font-weight: 600;
-  letter-spacing: 0.05em;
   margin: 0 30px;
   text-align: center;
   overflow: hidden;
@@ -18,7 +17,7 @@
       font-size: 75px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
-      margin: 0 30px;
+      margin: 0 40px;
       text-align: center;
       overflow: hidden;
       }
@@ -26,12 +25,12 @@
   
   @media (max-width: 480px) { 
     .fontNPortfolio {
-      font-size: 50px;
+      font-size: 40px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
       color: #000;
       text-align: center;
       overflow: hidden;
-      margin: 0 30px;
+      margin: 0 40px;
       }
   }
 

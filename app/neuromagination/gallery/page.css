@@ -1,5 +1,5 @@
 .NeuroG {
-  font-size:120px;
+  font-size:110px;
   letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: #000;
   justify-content: center;
@@ -16,7 +16,7 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .NeuroG {
-    font-size: 48px;
+    font-size: 40px;
     letter-spacing: 0.05em;
     margin: 0 30px;
     text-align: center;
@@ -27,7 +27,7 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1200px) { 
   .NeuroG {
-    font-size: 70px;
+    font-size: 75px;
     letter-spacing: 0.05em;
     margin: 0 30px;
     text-align: center;
