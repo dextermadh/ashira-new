@@ -8,6 +8,7 @@ import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from "../../app/common/Magnetic/idex";
 import image1 from "../../public/assets/FASHION_SHOOT_3/p (58).jpg";
 import Link from 'next/link';
+import SectionFreelancer from '../SectionFreelancer/SectionFreelancer';
 
 export default function Footer() {
     const container = useRef(null);
@@ -52,6 +53,9 @@ export default function Footer() {
                     <Rounded>
                         <p>+94761222577</p>
                     </Rounded>
+                </div>
+                <div className='m-1 mt-64 md:m-40'>
+                    <SectionFreelancer />
                 </div>
                 <div className={styles.info}>
                     <div>
