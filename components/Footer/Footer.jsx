@@ -71,7 +71,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <span>
-                            <p className='rights'>2024 © All Rights Reserved</p>
+                            <p className='rights'>2025 © All Rights Reserved</p>
                         </span>
                     </div>
                 </div>
