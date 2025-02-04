@@ -1,5 +1,8 @@
 import React from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import pph from '../../public/media/PeoplePerHour-Logo.webp'
+import fiverr from '../../public/media/original-bbc7ed3c46f3835c4b65ae92880c186f.webp'
 
 type SectionFreelancerProps = {};
 
@@ -56,8 +59,54 @@ const SectionFreelancer: React.FC<SectionFreelancerProps> = () => {
             float: "left",
           }}
           className="text-[18px] md:text-[20px] mt-4 ml-4"
+          target="_blank"
         >
           Hire me on Freelancer.com
+        </a>
+      </div>
+      <div className="mt-3 md:mt-5">
+        <Image
+          src={pph}
+          alt="PPH Icon"
+          style={{ clear: "left", float: "left", margin: "10px 0" }}
+          width={50}
+        />
+        <a
+          href="http://pph.me/ashiradesigns"
+          style={{
+            display: "block",
+            textDecoration: "underline",
+            verticalAlign: "middle",
+            height: "21px",
+            float: "left",
+          }}
+          className="text-[18px] md:text-[20px] mt-6 ml-4"
+          target="_blank"
+        >
+          Hire me on peopleperhour.com
+        </a>
+      </div>
+      <div className="mt-3 md:mt-5">
+        <Image
+          src={fiverr}
+          alt="Fiverr Icon"
+          style={{ clear: "left", float: "left", margin: "10px 0" }}
+          width={50}
+          
+        />
+        <a
+          href="https://www.fiverr.com/s/XLjLdjP"
+          style={{
+            display: "block",
+            textDecoration: "underline",
+            verticalAlign: "middle",
+            height: "21px",
+            float: "left",
+          }}
+          className="text-[18px] md:text-[20px] mt-6 ml-4"
+          target="_blank"
+        >
+          Hire me on Fiverr.com
         </a>
       </div>
       <img

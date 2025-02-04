@@ -54,7 +54,7 @@ export default function Footer() {
                         <p>+94761222577</p>
                     </Rounded>
                 </div>
-                <div className='m-1 mt-64 md:m-40'>
+                <div className='m-1 mt-60 mb-64 md:m-40 md:mb-80'>
                     <SectionFreelancer />
                 </div>
                 <div className={styles.info}>
