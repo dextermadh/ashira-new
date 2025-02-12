@@ -29,17 +29,20 @@ const Page: React.FC = () => {
     <div className="page-container overflow-hidden">
       <div className="content md:m-22 m-5 rounded-[50px] flex flex-row mt-[10vh] bg-gray-900 bg-opacity-0 md:h-[215vh] relative">
         <div className="text-white flex flex-row md:m-10">
-          <motion.div               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }} className="grid md:grid-cols-2 gap-10 p-5 md:p-10 ">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="grid md:grid-cols-2 gap-10 p-5 md:p-10 "
+          >
             {/* Hero Section */}
-            <motion.div
-              className="flex flex-col gap-10 relative md:m-3 "
-            >
+            <motion.div className="flex flex-col gap-10 relative md:m-3 ">
               <div className="md:text-4xl flex md:flex-col flex-col gap-5">
-                <div className="md:text-[100px] text-4xl flex flex-col bg-gray-900 bg-opacity-[70%] md:leading-[15vh]  rounded-[50px] p-10">
-                  <span className="md:leading-[15vh] leading-[8vh]">HI, I'm</span>{" "}
+                <div className="md:text-[100px] text-4xl flex flex-col bg-gray-900 bg-opacity-[70%] md:leading-[15vh] rounded-[50px] p-10">
+                  <span className="md:leading-[15vh] leading-[8vh]">
+                    HI, I&apos;m
+                  </span>{" "}
                   <mark className="bg-orange-200 rounded-[20px] p-3">
                     Ashira Fernando
                   </mark>
@@ -56,9 +59,7 @@ const Page: React.FC = () => {
             </motion.div>
 
             {/* About Section */}
-            <motion.div
-              className="text-2xl flex md:flex-col flex-col gap-10"
-            >
+            <motion.div className="text-2xl flex md:flex-col flex-col gap-10">
               <Image
                 src={image2}
                 alt=""
@@ -86,25 +87,18 @@ const Page: React.FC = () => {
                     blending high-end glamour with modern aesthetics.
                   </mark>
                   <span>
-                    Whether it's crafting breathtaking evening wear,
+                    Whether it&apos;s crafting breathtaking evening wear,
                     conceptualizing unique prints, or curating brand identities,
                   </span>
                   <mark className="bg-blue-200 p-1 rounded-md">
                     I bring artistry and expertise to every project. One stitch,
-                    sketch, and concept at a time.  
+                    sketch, and concept at a time.
                   </mark>
                 </div>
               </div>
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Background Image */}
-        {/* <Image
-          src={image4}
-          alt="background"
-          className="absolute top-0 md:w-[100vw] md:h-[220vh] scale-125 -z-10 blur-sm"
-        /> */}
       </div>
     </div>
   );
