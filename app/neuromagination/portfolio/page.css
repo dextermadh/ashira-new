@@ -1,5 +1,5 @@
 .fontNPortfolio {
-  font-size:110px;
+  font-size:90px;
   letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
   color: white;
   justify-content: center;
@@ -16,7 +16,7 @@
     .fontNPortfolio {
       font-size: 75px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-      color: #000;
+
       margin: 0 40px;
       text-align: center;
       overflow: hidden;
@@ -27,7 +27,7 @@
     .fontNPortfolio {
       font-size: 40px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-      color: #000;
+
       text-align: center;
       overflow: hidden;
       margin: 0 40px;
@@ -40,7 +40,6 @@
 
 .iframe1 {
   margin-top: 12vh;
-  border: 1px solid lightgray;
   width: 100%;
   height: 100vh;
 

@@ -18,9 +18,9 @@ body{
 
 
 .NeuroFont {
-  font-size:190px;
+  font-size:170px;
  /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-  color: #000;
+  color: white;
   justify-content: center;
   display: flex;
   align-items: center;

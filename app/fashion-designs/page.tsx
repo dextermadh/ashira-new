@@ -2,21 +2,16 @@ import React from "react";
 import IntroFSP from "./components/GradualSpacingDemo4";
 import "../fashion-designs/page.css";
 import { FashionDesignSection } from "./components/fashionDesignSection";
+import IntroFDP from "./components/GradualSpacingDemo4";
 
 function page() {
   return (
     <div>
       <div className="">
-        <IntroFSP />
-        <div className="iframe-container">
-        <iframe
-          allowFullScreen
-          scrolling="no"
-          src="https://heyzine.com/flip-book/a28ba6e100.html"
-          className="iframe1"
-        ></iframe>
-      </div>
-      <div className="mt-28">
+        <div className="-mt-52 md:mt-0">
+        <IntroFDP />
+        </div>
+      <div className="-mt-[35vh] md:-mt-[30vh]">
         <FashionDesignSection />
         </div>
       </div>

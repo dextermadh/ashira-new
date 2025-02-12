@@ -93,10 +93,11 @@ export default function Home() {
     <div className="">
       
     <div className="page-container">
-      <div className="IntroContainer">
+      <div className="IntroContainer -mt-52 md:mt-0">
         <IntroGraduateCollectionGallery />
       </div>
       
+      <div className="-mt-80 md:-mt-20">
       <main onMouseMove={mouseMove}>
         {projects.map(({ handle1, handle2 }, i) => (
           <Gallery
@@ -107,6 +108,7 @@ export default function Home() {
           />
         ))}
       </main>
+      </div>
       
     </div>
     </div>

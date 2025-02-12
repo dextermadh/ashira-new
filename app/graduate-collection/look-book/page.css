@@ -5,4 +5,44 @@
 
 }
 
-
+.fontLB {
+    font-size:90px; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  
+  
+  
+  @media (max-width: 768px) { 
+    .page-contentGG{
+      display: flex;
+      flex-direction: column;
+      margin-top: 30vh;
+      margin-bottom: 70vh;
+    }
+  
+    .card3 {
+      margin-bottom: 30vh;
+    }
+  
+    .fontG {
+      font-size: 35px;
+      letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+   
+      text-align: center;
+      margin: 0 30px;
+      text-align: center;
+      overflow: hidden;
+    }
+    
+  }
+  

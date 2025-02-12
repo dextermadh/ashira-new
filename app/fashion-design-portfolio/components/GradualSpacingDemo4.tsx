@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import '@/app/fashion-styling-portfolio/page.css' // Create this CSS module for styling
+import '@/app/fashion-design-portfolio/page.css' // Create this CSS module for styling
 
 const textVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -18,7 +18,7 @@ const IntroFDP: React.FC = () => {
       transition={{ duration: 1, ease: "easeOut" }} // Customize duration and easing
       className="fontFDP"
     >
-      Fashion Designs
+      Fashion Design Portfolio
     </motion.div>
   );
 };

@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 // Define the menu links
 const menuLinks = [
   { path: "/", label: "Home" },
-  { path: "/collaborate", label: "Collaborate" },
+  // { path: "/collaborate", label: "Collaborate" },
   { path: "/projects", label: "Projects" },
   { path: "/technical-developments", label: "Technical Developments" },
   { path: "/about", label: "About Me" },

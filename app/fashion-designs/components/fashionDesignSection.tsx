@@ -17,7 +17,12 @@ export function FashionDesignSection() {
       src: "/assets/Neuromagination/8V8A6486.jpg",
       path:"/neuromagination"
     },
-
+    {
+      title: "Fashion Design Portfolio",
+      button: "Explore More",
+      src: "https://images.unsplash.com/photo-1532053535693-4d96cfd5f529?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      path:"/fashion-design-portfolio"
+    },
       
   ];
   return (

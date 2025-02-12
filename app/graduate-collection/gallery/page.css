@@ -1,5 +1,5 @@
 .font2 {
-    font-size:110px;
+    font-size:90px;
     letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: white;
     justify-content: center;
@@ -15,7 +15,7 @@
 
   @media (max-width: 768px) { 
     .font2 {
-      font-size: 40px;
+      font-size: 35px;
       letter-spacing: 0.05em;
       margin: 0 40px;
       text-align: center;

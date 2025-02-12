@@ -77,7 +77,10 @@ export default function Home() {
 
   return (
     <div className="page-container">
+      <div className='-mt-52 md:mt-0'>
       <IntroNeuromaginationGallery />
+      </div>
+      <div className='-mt-80 md:-mt-40'>
       <main onMouseMove={mouseMove}>
         {projects.map(({ handle1, handle2 }, i) => (
           <Gallery
@@ -88,6 +91,7 @@ export default function Home() {
           />
         ))}
       </main>
+      </div>
     </div>
   );
 }

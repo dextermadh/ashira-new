@@ -1,3 +1,49 @@
+.page-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fontFDP {
+    font-size:170px;
+    letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .fontFDP {
+        font-size:45px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+    .fontFDP {
+        font-size: 90px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+
 .iframe1 {
     margin-top: 12vh;
 

@@ -47,9 +47,9 @@ body{
   }
 
   .fontG {
-    font-size: 70px;
+    font-size: 55px;
     letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-    color: #000;
+ 
     text-align: center;
     margin: 0 30px;
     text-align: center;
@@ -62,7 +62,6 @@ body{
   .fontG {
     font-size: 85px;
     letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-    color: #000;
     text-align: center;
     margin: 0 30px;
     text-align: center;

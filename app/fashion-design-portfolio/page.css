@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.fontFSP {
+.fontFDP {
     font-size:120px;
     letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
     color: white;
@@ -19,8 +19,8 @@
 }
 
 @media (max-width: 768px) {
-    .fontFSP {
-        font-size:45px;
+    .fontFDP {
+        font-size:55px;
         justify-content: center;
         display: flex;
         align-items: center;

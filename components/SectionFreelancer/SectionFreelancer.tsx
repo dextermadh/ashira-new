@@ -35,12 +35,12 @@ const SectionFreelancer: React.FC<SectionFreelancerProps> = () => {
           <span className="mt-1 text-white">ashirabusiness01@gmail.com</span>
         </div>
 
-        <div className="flex m-0 text-[18px] md:text-[20px] gap-2">
+        {/* <div className="flex m-0 text-[18px] md:text-[20px] gap-2">
           <div className="mt-1"><MapPin className="w-4 md:w-5" color="white"/></div>
           <span className="leading-none mt-2 text-white">
             59, Gamamada Rd, Walpitamulla, Dewalapola, Minuwangoda, 11102
           </span>
-        </div>
+        </div> */}
         </div>
       </div>
       <div className="mt-3 md:mt-5">

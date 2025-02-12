@@ -23,9 +23,11 @@ export default function Home() {
 
   return (
     <div>
+      <div className='-mt-52 md:mt-0'>
         <IntroGraduateCollection />
-        <div className="containerGG">
-          <div className="page-contentGG">
+        </div>
+        <div className="containerGG ">
+          <div className="-mt-80 md:-mt-48 gap-3 flex md:flex-row flex-col justify-center items-center">
             <Link href="graduate-collection/portfolio" passHref>
               <Card imageSrc='/assets/FASHION_SHOOT_3/p (25).jpg' text='Portfolio'/>
             </Link>
