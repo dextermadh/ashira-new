@@ -91,7 +91,7 @@ const Page: React.FC = () => {
                   </span>
                   <mark className="bg-blue-200 p-1 rounded-md">
                     I bring artistry and expertise to every project. One stitch,
-                    sketch, and concept at a time.
+                    sketch, and concept at a time.  
                   </mark>
                 </div>
               </div>
