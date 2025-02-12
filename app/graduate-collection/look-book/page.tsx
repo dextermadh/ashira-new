@@ -19,18 +19,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div>'
+    <div>
       <div className="md:mt-0 -mt-52">
         <IntroGraduateCollectionLookbook />
       </div>
-    <div className="iframe-container md:-mt-40 -mt-96">
-      <iframe
-        allowFullScreen
-        scrolling="no"
-        src="https://heyzine.com/flip-book/e895ae4bf4.html"
-        className="iframe1"
-      ></iframe>
-    </div>
+      <div className="iframe-container md:-mt-40 -mt-96">
+        <iframe
+          allowFullScreen
+          scrolling="no"
+          src="https://heyzine.com/flip-book/e895ae4bf4.html"
+          className="iframe1"
+        ></iframe>
+      </div>
     </div>
   );
 }
