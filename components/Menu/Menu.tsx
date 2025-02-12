@@ -11,7 +11,6 @@ const menuLinks = [
   { path: "/collaborate", label: "Collaborate" },
   { path: "/projects", label: "Projects" },
   { path: "/technical-developments", label: "Technical Developments" },
-  { path: "/private-label", label: "Private Label" },
   { path: "/about", label: "About Me" },
 ];
 
@@ -101,14 +100,14 @@ const Menu: React.FC = () => {
               <a href="https://www.behance.net/omasheefernando10" target="_blank" rel="noopener noreferrer">Behance &#8599;</a>
             </div>
             <div className="menu-info-col">
-              <p>eesamo.designs@gmail.com</p>
+              <p>ashirafernando.uni@gmail.com</p>
               <p>+94761222577</p>
             </div>
           </div>
         </div>
-        <div className="menu-preview">
+        {/* <div className="menu-preview">
           <p>View Showreel</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import VelocityScroll from "@/components/VelocityScroll";
 import { ProjectSection } from "./components/projectSection";
 
 // Page component for handling the introduction and project sections
-const Page: React.FC = () => {
+const ProjectSectionMain: React.FC = () => {
 
   return (
     <div className="page-container"> {/* Added className for styling */}
@@ -20,4 +20,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default ProjectSectionMain;

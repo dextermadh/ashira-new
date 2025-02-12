@@ -1,22 +1,24 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import '@/app/about/brand.css'; // Make sure to optimize this CSS as well.
-
-const textVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-};
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import "@/app/about/brand.css"; // Optimize this CSS if needed.
 
 const IntroAbout: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"], // Fades out as it scrolls up
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
     <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={textVariants}
-      transition={{ duration: 1, ease: "easeOut" }}
+      ref={ref}
+      initial={{ opacity: 1, x: 0 }}
+      style={{ opacity, willChange: "opacity, transform" }}
       className="IntroAbout"
-      style={{ willChange: 'transform, opacity' }} // Inform browser of impending changes
     >
       About ME
     </motion.div>

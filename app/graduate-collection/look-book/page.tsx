@@ -1,18 +1,18 @@
-'use client';
-import { useEffect } from 'react';
-import './page.css';
+"use client";
+import { useEffect } from "react";
+import "./page.css";
 
 export default function Home() {
   useEffect(() => {
     // Enable smooth scrolling using native CSS
     if (typeof document !== "undefined") {
-      document.documentElement.style.scrollBehavior = 'smooth';
+      document.documentElement.style.scrollBehavior = "smooth";
     }
 
     // Clean up on component unmount
     return () => {
       if (typeof document !== "undefined") {
-        document.documentElement.style.scrollBehavior = '';
+        document.documentElement.style.scrollBehavior = "";
       }
     };
   }, []);
@@ -21,9 +21,10 @@ export default function Home() {
     <div className="iframe-container">
       <iframe
         allowFullScreen
-        className="iframe1"
+        scrolling="no"
         src="https://heyzine.com/flip-book/e895ae4bf4.html"
-      />
+        className="iframe1"
+      ></iframe>
     </div>
   );
 }

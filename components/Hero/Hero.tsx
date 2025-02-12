@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react';
 import styles from './Hero.module.css';
 import Image from 'next/image';
-import image1 from "../../public/assets/8V8A6294.jpg";
+import image1 from "../../public/media/retouch_2025021200222027.jpg";
 import { motion } from 'framer-motion';
 import { slideUp } from './animation';
 

@@ -47,7 +47,7 @@
     font-family: "MonteLight", sans-serif; /* Ensure fallback font is available */
     padding: 16px;
     font-size: 20px;
-    color: #333;
+    color: whitesmoke;
     text-align: center;
     z-index: 2; /* Ensure text stays above the overlay */
     position: relative; /* Position relative to keep it above the overlay */

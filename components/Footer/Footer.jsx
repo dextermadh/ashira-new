@@ -6,7 +6,7 @@ import Rounded from '../../app/common/RoundedButton/index';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from "../../app/common/Magnetic/idex";
-import image1 from "../../public/assets/FASHION_SHOOT_3/p (58).jpg";
+import image1 from "../../public/media/retouch_2025021200222027.jpg";
 import Link from 'next/link';
 import SectionFreelancer from '../SectionFreelancer/SectionFreelancer';
 
@@ -40,17 +40,17 @@ export default function Footer() {
                     </div>
                     <motion.div style={{ x }} className={styles.buttonContainer}>
                         <Link href="/collaborate">
-                            <Rounded backgroundColor={"#cdae89"} className={styles.button}>
+                            <Rounded backgroundColor={"darkgrey"} className={styles.button}>
                                 <p>Get in touch</p>
                             </Rounded>
                         </Link>
                     </motion.div>
                 </div>
                 <div className={styles.nav}>
-                    <Rounded>
-                        <p>eesamo.designs@gmail.com</p>
+                    <Rounded backgroundColor={"darkgrey"}>
+                        <p>ashirafernando.uni@gmail.com</p>
                     </Rounded>
-                    <Rounded>
+                    <Rounded backgroundColor={"darkgrey"}>
                         <p>+94761222577</p>
                     </Rounded>
                 </div>

@@ -1,0 +1,56 @@
+.page-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fontFSP {
+    font-size:140px;
+    letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    margin: 0 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .fontFSP {
+        font-size:55px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+        margin: 0 30px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+    .fontFSP {
+        font-size: 90px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+.carouselContainer {
+    overflow: hidden;
+}
+
+.iframe1 {
+    margin-top: 12vh;
+
+    width: 100%;
+    height: 100vh;
+
+}

@@ -25,7 +25,7 @@ export function CV() {
                 downloadFileAtURL(pdf);
             }}>
                 <PinContainer
-                    title="Download CV" className="container"
+                    title="Download My CV" className="container"
                 >
                     <div className="BcardContainer">
                         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[65rem] h-[40rem]">

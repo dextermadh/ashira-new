@@ -38,7 +38,7 @@ body,
 .fontPortfolio {
   font-size:110px;
 /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-  color: #000;
+  color: white;
   text-align: center;
   justify-content: center;
   display: flex;
@@ -249,3 +249,10 @@ body,
   .carouselContainer {
     overflow: hidden;
   }
+
+  .iframe1 {
+    margin-top: 12vh;
+    width: 100%;
+    height: 100vh;
+
+}

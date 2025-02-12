@@ -6,19 +6,19 @@
     justify-content: center;
     position: fixed;
     z-index: 9999;
-    background-color: #fff;
+    background-color: black;
     svg{
         position: absolute;
         top: 0;
         width: 100%;
         height: calc(100% + 300px);
         path{
-            fill: #fff;
+            fill: black;
         }
     }
     p{
         display: flex;
-        color: black;
+        color: white;
         font-size: 42px;
         align-items: center;
         position: absolute;
@@ -27,7 +27,7 @@
             display: block;
             width: 10px;
             height: 10px;
-            background-color: white;
+            background-color: grey;
             border-radius: 50%;
             margin-right: 10px;
         }

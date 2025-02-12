@@ -1,7 +1,7 @@
 .fontNPortfolio {
   font-size:110px;
   letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-  color: #000;
+  color: white;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -36,4 +36,12 @@
 
 .carouselContainer {
   overflow: hidden;
+}
+
+.iframe1 {
+  margin-top: 12vh;
+  border: 1px solid lightgray;
+  width: 100%;
+  height: 100vh;
+
 }

@@ -19,7 +19,7 @@ body{
 
 .fontG {
   font-size:140px; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-  color: #000;
+  color: white;
   justify-content: center;
   display: flex;
   align-items: center;

@@ -6,7 +6,7 @@
 
 .fontProject {
     font-size: 280px; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
-    color: #000;
+    color: white;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -117,7 +117,8 @@
       letter-spacing: 0.05em;
         margin: 0 30px;
         text-align: center;
-        overflow: hidden; /* Smaller font-size for mobile screens */
+        overflow: hidden; 
+        /* Smaller font-size for mobile screens */
       }
     
 

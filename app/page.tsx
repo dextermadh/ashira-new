@@ -11,11 +11,11 @@ import { useScroll } from 'framer-motion';
 import IntroTechnicalDevelopments from "./technical-developments/components/GradualSpacingDemo4";
 import Carousel3 from "./technical-developments/components/carousel/caorusel";
 import '@/app/technical-developments/page.css'
-import { ProjectSectionMain } from "./projects/components/projectSection";
+import { ProjectSection } from "./projects/components/projectSection";
 
 // Optimize HeroSection and ProjectSection if they are large
 const MemoizedHeroSection = React.memo(HeroSection);
-const MemoizedProjectSection = React.memo(ProjectSectionMain);
+const MemoizedProjectSection = React.memo(ProjectSection);
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);

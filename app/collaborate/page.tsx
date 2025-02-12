@@ -12,8 +12,8 @@ const Page: React.FC = () => {
 
     return (
         <div className="page-container">
-            <IntroCollaborate />
-            <div className="main">
+            {/* <IntroCollaborate /> */}
+            <div className="main md:mt-20">
                 <CV />
             </div>
         </div>

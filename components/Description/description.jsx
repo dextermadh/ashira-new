@@ -22,7 +22,7 @@ export default function Description() {
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>My passion for fashion, craftsmanship, and innovation places me in a unique position in the world of fashion design.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Link href='/about'>
-                    <Rounded backgroundColor='#cdae89' className={styles.button}>
+                    <Rounded backgroundColor='' className={styles.button}>
                         <p>About me</p>
                     </Rounded>
                     </Link>

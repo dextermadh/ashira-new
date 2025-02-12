@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import Background from '../../../public/assets/8V8A6294.jpg';
+import Background from '../../../public/media/SHR_2203_color.jpg';
 import Background3 from "../../../public/assets/1.jpg";
 import Background2 from "../../../public/assets/FASHION_SHOOT_3/p (58).jpg";
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -107,7 +107,7 @@ export function Section1() {
                         src={Background} 
                         fill 
                         alt="Background Image 2" 
-                        className='BackgroundImgAbout' 
+                        className='BackgroundImgAbout2' 
                         style={{ objectFit: "cover", willChange: 'transform' }} 
                         priority={false} 
                         sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"

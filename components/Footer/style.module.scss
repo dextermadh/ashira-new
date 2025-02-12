@@ -16,7 +16,7 @@
         padding-top: 200px;
         width: 100%;
         max-width: 1800px;
-        background: white;
+        background: rgb(20, 20, 20);
 
         .title {
             border-bottom: 1px solid rgb(134, 134, 134);
@@ -27,17 +27,20 @@
             span {
                 display: flex;
                 align-items: center;
+                color: white;
 
                 .imageContainer {
-                    width: 100px;
-                    height: 100px;
+                    width: 150px;
+                    height: 150px;
                     position: relative;
                     border-radius: 50%;
                     overflow: hidden;
+                    border: 4px solid white;
 
                     img {
                         object-fit: cover;
                         object-position: 50% 7%;
+                        scale: 2;
                     }
                 }
 
@@ -50,6 +53,7 @@
                 font-size: 6vw;
                 margin: 0;
                 font-weight: 300;
+                color: white;
             }
 
             .buttonContainer {
@@ -61,7 +65,7 @@
             .button {
                 width: 180px;
                 height: 180px;
-                background: #dbc5ab;
+                background: grey;
                 color: white;
                 border-radius: 50%;
                 position: absolute;
@@ -79,7 +83,7 @@
                     
                 }
             }
-
+            
             svg {
                 position: absolute;
                 top: 30%;
@@ -180,8 +184,8 @@
                     text-align: center;
     
                     .imageContainer {
-                        width: 150px;
-                        height: 150px;
+                        width: 120px;
+                        height: 120px;
                         border-radius: 50%;
                         overflow: hidden;
                     }
