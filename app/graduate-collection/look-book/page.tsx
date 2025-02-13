@@ -20,10 +20,10 @@ export default function Home() {
 
   return (
     <div>
-      <div className="md:mt-0 -mt-52">
+      <div className="md:mt-48 mt-40">
         <IntroGraduateCollectionLookbook />
       </div>
-      <div className="iframe-container md:-mt-40 -mt-96">
+      <div className="iframe-container md: ">
         <iframe
           allowFullScreen
           scrolling="no"

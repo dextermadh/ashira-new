@@ -11,14 +11,14 @@ const Page = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="">
-      <div className="md:mt-0 -mt-52">
+    <div className="flex flex-col md:mt-48">
+      <div className="md:mt-0 mt-28">
       <IntroTechnicalDevelopments />
       </div>
       <motion.div       initial="hidden"
       animate="visible"
       variants={textVariants}
-      transition={{ duration: 1, ease: "easeOut" }} className="iframe-container md:-mt-40 -mt-96">
+      transition={{ duration: 1, ease: "easeOut" }} className="iframe-container md:mt-20">
         <iframe
           allowFullScreen
           scrolling="no"

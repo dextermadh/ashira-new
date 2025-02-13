@@ -23,16 +23,16 @@ export default function Home() {
 
   return (
     <div>
-      <div className="-mt-52 md:mt-0">
+      <div className="mt-48 md:mt-60">
       <IntroNeuromaginationPortfolio />
       </div>
-      <div className="-mt-52 m-10 md:-mt-30">
+      <div className="mt-80 m-10 md:mt-10">
       <PortfolioDescription
         text={
           "This Conceptual Development was created and implemented during the second year of study, drawing inspiration from the inexhaustible human power to imagine."
         }
       /></div>
-      <div className="iframe-container -mt-40 md:-mt-20">
+      <div className="iframe-container -mt-28 md:-mt-10">
         <iframe
           allowFullScreen
           scrolling="no"

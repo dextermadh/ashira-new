@@ -93,11 +93,11 @@ export default function Home() {
     <div className="">
       
     <div className="page-container">
-      <div className="IntroContainer -mt-52 md:mt-0">
+      <div className="IntroContainer mt-40 md:mt-60">
         <IntroGraduateCollectionGallery />
       </div>
       
-      <div className="-mt-80 md:-mt-20">
+      <div className="mt-20 md:mt-28">
       <main onMouseMove={mouseMove}>
         {projects.map(({ handle1, handle2 }, i) => (
           <Gallery

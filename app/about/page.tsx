@@ -27,7 +27,7 @@ const Page: React.FC = () => {
 
   return (
     <div className="page-container overflow-hidden">
-      <div className="content md:m-22 m-5 rounded-[50px] flex flex-row mt-[10vh] bg-gray-900 bg-opacity-0 md:h-[215vh] relative">
+      <div className="content md:m-22 m-5 rounded-[50px] flex flex-row mt-[10vh] bg-gray-900 bg-opacity-0 md:h-[215vh] relative ">
         <div className="text-white flex flex-row md:m-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -39,7 +39,7 @@ const Page: React.FC = () => {
             {/* Hero Section */}
             <motion.div className="flex flex-col gap-10 relative md:m-3 ">
               <div className="md:text-4xl flex md:flex-col flex-col gap-5">
-                <div className="md:text-[100px] text-4xl flex flex-col bg-gray-900 bg-opacity-[70%] md:leading-[15vh] rounded-[50px] p-10">
+                <div className="md:text-[100px] text-4xl flex flex-col bg-gray-900 bg-opacity-[70%] md:leading-[15vh] rounded-[50px] md:p-10 p-7">
                   <span className="md:leading-[15vh] leading-[8vh]">
                     HI, I&apos;m
                   </span>{" "}
@@ -47,26 +47,26 @@ const Page: React.FC = () => {
                     Ashira Fernando
                   </mark>
                 </div>
-                <span className="text-xl md:text-4xl italic bg-gray-900 bg-opacity-[70%] p-10 rounded-[50px]">
+                <span className="text-xl md:text-4xl italic bg-gray-900 bg-opacity-[70%] md:p-10 p-7 rounded-[50px]">
                   Fashion Designer, Illustrator and Stylist
                 </span>
               </div>
               <Image
                 src={image}
                 alt="me"
-                className="bg-gray-900 bg-opacity-[70%] p-10 md:h-[95vh] md:w-[45vw] w-[200vw] h-[45vh] object-cover object-center rounded-[50px] z-50 hidden md:flex"
+                className="bg-gray-900 bg-opacity-[70%] md:p-10   md:h-[95vh] md:w-[45vw] w-[200vw] h-[45vh] object-cover object-center rounded-[50px] z-50 hidden md:flex"
               />
             </motion.div>
 
             {/* About Section */}
-            <motion.div className="text-2xl flex md:flex-col flex-col gap-10">
+            <motion.div className="text-2xl flex md:flex-col flex-col -mt-5 md:mt-0 md:gap-10 gap-5">
               <Image
                 src={image2}
                 alt=""
-                className="md:h-[90vh] md:w-[100vw] h-[40vh] object-cover object-[25%_05%] bg-opacity-[70%] bg-gray-900 p-10 rounded-[50px]"
+                className="md:h-[90vh] md:w-[100vw] h-[40vh] object-cover object-[25%_05%] bg-opacity-[70%] bg-gray-900 md:p-10 p-5 rounded-[50px]"
               />
-              <div className="flex flex-col gap-10">
-                <div className="flex flex-col bg-gray-900 bg-opacity-[70%] p-10 gap-3 rounded-[50px]">
+              <div className="flex flex-col md:gap-10 gap-5">
+                <div className="flex flex-col bg-gray-900 bg-opacity-[70%] p-10 md:gap-3 gap-5 rounded-[50px]">
                   <span>
                     With an eye for innovation and a passion for storytelling
                     through design,
@@ -81,7 +81,7 @@ const Page: React.FC = () => {
                     flawless garments.
                   </span>
                 </div>
-                <div className="bg-gray-900 bg-opacity-[70%] p-10 rounded-[50px] flex flex-col gap-3">
+                <div className="bg-gray-900 bg-opacity-[70%] p-10 rounded-[50px] flex flex-col md:gap-3 gap-5">
                   <mark className="bg-green-200 p-1 rounded-md">
                     Every design I create is a reflection of originality,
                     blending high-end glamour with modern aesthetics.

@@ -22,12 +22,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <div className='-mt-52 md:mt-0'>
+    <div className='flex flex-col'>
+      <div className='mt-40 mb-52  md:mt-40'>
         <IntroGraduateCollection />
         </div>
         <div className="containerGG ">
-          <div className="-mt-80 md:-mt-48 gap-3 flex md:flex-row flex-col justify-center items-center">
+          <div className=" md:-mt-10 gap-3 flex m-10 md:flex-row flex-col justify-center items-center">
             <Link href="graduate-collection/portfolio" passHref>
               <Card imageSrc='/assets/FASHION_SHOOT_3/p (25).jpg' text='Portfolio'/>
             </Link>

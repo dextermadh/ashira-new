@@ -23,7 +23,6 @@ body{
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 100vh;
   font-weight: 600;
   letter-spacing: 0.05em;
   margin: 0 30px;
@@ -47,7 +46,7 @@ body{
   }
 
   .fontG {
-    font-size: 55px;
+    font-size: 50px;
     letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
  
     text-align: center;

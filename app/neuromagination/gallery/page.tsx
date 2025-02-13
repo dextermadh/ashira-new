@@ -77,10 +77,10 @@ export default function Home() {
 
   return (
     <div className="page-container">
-      <div className='-mt-52 md:mt-0'>
+      <div className='mt-44 md:mt-60'>
       <IntroNeuromaginationGallery />
       </div>
-      <div className='-mt-80 md:-mt-40'>
+      <div className='mt-20 md:mt-32'>
       <main onMouseMove={mouseMove}>
         {projects.map(({ handle1, handle2 }, i) => (
           <Gallery

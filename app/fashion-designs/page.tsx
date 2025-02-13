@@ -7,11 +7,11 @@ import IntroFDP from "./components/GradualSpacingDemo4";
 function page() {
   return (
     <div>
-      <div className="">
-        <div className="-mt-52 md:mt-0">
+      <div className="flex flex-col md:mt-40">
+        <div className="mt-40 md:mt-0">
         <IntroFDP />
         </div>
-      <div className="-mt-[35vh] md:-mt-[30vh]">
+      <div className=" md:mt-0">
         <FashionDesignSection />
         </div>
       </div>

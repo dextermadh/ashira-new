@@ -23,11 +23,11 @@ export default function Home() {
 
   return (
     <div>
-      <div className='-mt-52 md:mt-0'>
+      <div className='mt-60 md:mt-40'>
       <IntroNeuromagination />
       </div>
       <div className="containerNeuro">
-        <div className="flex flex-col items-center justify-center md:-mt-40  -mt-80 gap-3 md:flex-row md:items-center">
+        <div className="flex flex-col items-center justify-center md:mt-4 mt-20 m-10  gap-3 md:flex-row md:items-center">
           <Link href="neuromagination/portfolio" passHref>
             <Card 
               imageSrc='/assets/Neuromagination/8V8A6486.jpg' 

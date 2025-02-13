@@ -11,8 +11,7 @@ body{
   margin-bottom: 20vh;
 }
 .containerNeuro {
-  margin-top: -20vh;
-  margin-bottom: 20vh;
+
   
 }
 
@@ -24,7 +23,6 @@ body{
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 100vh;
   font-weight: 600;
   letter-spacing: 0.05em;
   margin: 0 30px;

@@ -11,7 +11,6 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 100vh;
     font-weight: 600;
     letter-spacing: 0.05em;
     margin: 0 30px;
@@ -34,12 +33,12 @@
       margin-bottom: 30vh;
     }
   
-    .fontG {
+    .fontLB {
       font-size: 35px;
       letter-spacing: 0.05em; /* Reduced letter-spacing *//* Adjusted line-height for spacing */
    
       text-align: center;
-      margin: 0 30px;
+      margin: 40px;
       text-align: center;
       overflow: hidden;
     }

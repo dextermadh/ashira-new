@@ -44,7 +44,6 @@ body,
   display: flex;
   margin: 0 30px;
   align-items: center;
-  height: 100vh;
   font-weight: 600;
   letter-spacing: 0.05rem;
 }

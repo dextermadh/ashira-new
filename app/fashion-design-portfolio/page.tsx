@@ -5,10 +5,10 @@ import IntroFDP from "./components/GradualSpacingDemo4";
 
 function page() {
   return (
-    <div>
-      <div className="">
+    <div className="flex flex-col">
+      <div className="md:mt-60 mt-40">
         <IntroFDP />
-        <div className="iframe-container -mt-40 ">
+        <div className="iframe-container ">
           <iframe
             allowFullScreen
             scrolling="no"

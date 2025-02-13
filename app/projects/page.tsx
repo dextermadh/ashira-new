@@ -15,22 +15,18 @@ const ProjectSectionMain: React.FC = () => {
   };
 
   return (
-    <div className="page-container -mb-40">
+    <div className="flex md:mt-28 md:gap-0 mt-40 flex-col gap-5">
       {" "}
       {/* Added className for styling */}
-      <div className="md:mt-0 -mt-52">
+      <div className="md:mt-0">
         <IntroProjects />
       </div>
       <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={textVariants}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="projectMain -mt-40"
+          className="md:-mt-10"
       >
         <ProjectSection />
       </motion.div>
-      <div className="-mt-52 md:mt-0">
+      <div className="md:mt-0">
         <VelocityScroll />
       </div>
     </div>
